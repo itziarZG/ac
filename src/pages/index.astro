@@ -6,575 +6,180 @@ import Layout from "../layouts/Layout.astro";
 ---
 
 <Layout>
-  <div class="page-content">
-    <header class="site-header">
-      <h1>Ángela Cervantes</h1>
-      <p class="tagline">
-        Bienvenidas, a mi rincón de sueños musicales de raíz...
-      </p>
-      <div class="presskit-buttons">
-        <a href="/presskit/arrels" class="presskit-button"
-          >ARRELS D'ARA PressKIT</a
+  <!-- Hero Section -->
+  <section class="hero">
+    <div class="hero-social">
+       <a
+          href="https://www.facebook.com/angelacervantescantante"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="social-icon"
+          aria-label="Facebook"
         >
-        <a href="/presskit/olas" class="presskit-button"
-          >OLAS Y ARENAS PressKIT</a
-        >
-      </div>
-    </header>
-
-    <section class="videos-section">
-      <h2>Vídeos</h2>
-      <div class="video-list">
-        <div class="video-item">
-          <div class="video-thumbnail">
-            <img src="/images/video1.jpg" alt="OLAS y ARENAS - Teaser" />
-            <div class="play-icon">▶</div>
-          </div>
-          <h3>OLAS y ARENAS - Teaser - Pepe Rivero y Ángela Cervantes</h3>
-        </div>
-
-        <div class="video-item">
-          <div class="video-thumbnail">
-            <img src="/images/video2.jpg" alt="Mi versión" />
-            <div class="play-icon">▶</div>
-          </div>
-          <h3>
-            Mi versión • Pepe Rivero y Ángela Cervantes featuring Ariel Bringuez
-          </h3>
-        </div>
-
-        <div class="video-item">
-          <div class="video-thumbnail">
-            <img src="/images/video3.jpg" alt="Es tarde ya" />
-            <div class="play-icon">▶</div>
-          </div>
-          <h3>Es tarde ya - Pepe Rivero y Ángela Cervantes (Sylvia Rexach)</h3>
-        </div>
-
-        <div class="video-item">
-          <div class="video-thumbnail">
-            <img src="/images/video4.jpg" alt="Ojos Malignos" />
-            <div class="play-icon">▶</div>
-          </div>
-          <h3>
-            Nuevo Single "Ojos Malignos" - Ángela Cervantes "Camino a Santa
-            Clara"
-          </h3>
-        </div>
-      </div>
-    </section>
-
-    <section class="concerts-section">
-      <h2>Conciertos</h2>
-      <div class="testimonials">
-        <blockquote>
-          "Se trata de un trabajo fresco, novedoso, tradicional y al mismo
-          tiempo contemporáneo, respetando la raíz de su origen. Los arreglos,
-          los solos y especialmente la vocalista Ángela Cervantes son
-          maravillosos."
-          <cite>Chucho Valdés, sobre el álbum Camino a Santa Clara</cite>
-        </blockquote>
-
-        <blockquote>
-          "El milagro de una buena voz, aparte de años de técnica y estudios, es
-          aquella que con su personalidad te hace olvidar los problemas diarios
-          con los que nos toca convivir, que te enamora, te duelen o te hace
-          viajar."
-          <cite
-            >Antonio M. Beneyto. Diario El Mundo sobre un concierto de En esta
-            Orilla de Drexler</cite
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="24"
+            height="24"
+            viewBox="0 0 24 24"
+            fill="currentColor"
           >
-        </blockquote>
-      </div>
-    </section>
-
-    <section class="biography-section">
-      <h2>Biografía</h2>
-      <div class="bio-button-container">
-        <a href="/biography" class="bio-button">Bio Completa AQUÍ</a>
-      </div>
-      <blockquote class="bio-quote">
-        "Como persona y como artista, Ángela Cervantes tiene la excepcional
-        capacidad de transformar lo tosco y rudo de nuestra vida cotidiana, en
-        algo bello y digno de admirar. Bondad y luz emanan inagotables de su
-        interior, e impiden que el demoledor transcurso de la costumbre y la
-        rutina, arruinen el encanto, la magia, la poética y la ilusión de luchar
-        por un mundo mejor. Esta condición, determina inevitablemente el
-        resultado de su música. Además de apreciarse en ella un dominio técnico
-        y expresivo abrumador, con todo su coraje, Ángela consigue difundir un
-        mensaje lleno de confianza y esperanza. Sin duda alguna, cualquier
-        persona que la escuche cantar, se llevará mucho más de lo que traía."
-        <cite
-          >María Hidalgo - Escritora y Directora de la Escuela de Artes de
-          Madrid, TAI</cite
+            <path
+              d="M9 8h-3v4h3v12h5v-12h3.642l.358-4h-4v-1.667c0-.955.192-1.333 1.115-1.333h2.885v-5h-3.808c-3.596 0-5.192 1.583-5.192 4.615v3.385z"
+            ></path>
+          </svg>
+        </a>
+        <a
+          href="https://www.instagram.com/angelacervantesmusic"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="social-icon"
+          aria-label="Instagram"
         >
-      </blockquote>
-    </section>
-
-    <section class="albums-section">
-      <h2>Álbumes</h2>
-      <div class="album-list">
-        <div class="album">
-          <img src="/images/album1.jpg" alt="En esta Orilla de Drexler" />
-          <p>Portada del álbum debut, En esta Orilla de Drexler 2012</p>
-        </div>
-        <div class="album">
-          <img src="/images/album2.jpg" alt="Camino a Santa Clara" />
-          <p>
-            Portada del álbum, Camino a Santa Clara, Por 50 años más con Los
-            Fakires 2015
-          </p>
-        </div>
-        <div class="album">
-          <img
-            src="/images/album3.jpg"
-            alt="Recordando a Ella Fitzgerald & Joe Pass"
-          />
-          <p>
-            Portada del Álbum, Recordando a Ella Fitzgerald & Joe Pass (junto a
-            Chema Saiz)
-          </p>
-        </div>
-        <div class="album">
-          <img src="/images/album4.jpg" alt="Olas y Arenas" />
-          <p>
-            Portada del álbum, Olas y Arenas, de Pepe Rivero y Ángela Cervantes
-            (Producido por JazzLatino Org 2021
-          </p>
-        </div>
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="24"
+            height="24"
+            viewBox="0 0 24 24"
+            fill="currentColor"
+          >
+            <path
+              d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"
+            ></path>
+          </svg>
+        </a>
+        <a
+          href="https://www.youtube.com/channel/UCVmDdJNQrAYTGaKu6vYuHVQ"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="social-icon"
+          aria-label="YouTube"
+        >
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="24"
+            height="24"
+            viewBox="0 0 24 24"
+            fill="currentColor"
+          >
+            <path
+              d="M19.615 3.184c-3.604-.246-11.631-.245-15.23 0-3.897.266-4.356 2.62-4.385 8.816.029 6.185.484 8.549 4.385 8.816 3.6.245 11.626.246 15.23 0 3.897-.266 4.356-2.62 4.385-8.816-.029-6.185-.484-8.549-4.385-8.816zm-10.615 12.816v-8l8 3.993-8 4.007z"
+            ></path>
+          </svg>
+        </a>
+        <a
+          href="https://open.spotify.com/artist/3Cmri0Agw9HwVy2fNTblZ6"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="social-icon"
+          aria-label="Spotify"
+        >
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="24"
+            height="24"
+            viewBox="0 0 24 24"
+            fill="currentColor"
+          >
+            <path
+              d="M12 0c-6.627 0-12 5.373-12 12s5.373 12 12 12 12-5.373 12-12-5.373-12-12-12zm0 2c5.514 0 10 4.486 10 10s-4.486 10-10 10-10-4.486-10-10 4.486-10 10-10zm-1.834 15.496c3.063 0 5.834-1.241 7.834-3.241l-1.414-1.414c-1.622 1.622-3.858 2.655-6.42 2.655-2.564 0-4.798-1.033-6.42-2.655l-1.414 1.414c2 2 4.771 3.241 7.834 3.241zm.328-3.992c2.101 0 4.023-.743 5.523-2.242l-1.414-1.414c-1.105 1.104-2.63 1.656-4.109 1.656-1.477 0-3.004-.551-4.108-1.656l-1.414 1.414c1.499 1.499 3.422 2.242 5.522 2.242zm-.331-4c1.688 0 3.224-.676 4.342-1.793l-1.414-1.414c-.729.729-1.738 1.207-2.928 1.207-1.189 0-2.199-.478-2.928-1.207l-1.414 1.414c1.118 1.118 2.654 1.793 4.342 1.793z"
+            ></path>
+          </svg>
+        </a>
+    </div>
+      <h1>Ángela Cervantes</h1>
+      <h2>Bienvenidas, a mi rincón de sueños musicales de raíz...</h2>
+      <div class="hero-buttons">
+        <a href="#music" class="btn">ARRELS D'ARA presskit ---></a>
+        <a href="#about" class="btn-secondary">OLAS Y ARENAS presskit --->  </a>
       </div>
-      <div class="enter-button-container">
-        <a href="/albums" class="enter-button">Entra</a>
-      </div>
-    </section>
-
-    <section class="reviews-section">
-      <div class="review-list">
-        <div class="review">
-          <h3>La Shica</h3>
-          <p>
-            "La primera vez que la vi cantar en directo, no pude cerrar la boca
-            en todo el concierto... No entendía cómo alguien tan joven, podía
-            tener todo eso dentro. Si cierras los ojos cuando ella está
-            cantando, puedes sentir cómo las más grandes divas de la canción
-            desfilan por su garganta..."
-          </p>
-        </div>
-        <div class="review">
-          <h3>North West End Press</h3>
-          <p>
-            "Angela Cervantes, who takes on the indefinable role of Clare Torry
-            in 'Great Gig in the Sky' is superb in her unearthly rendition"
-          </p>
-        </div>
-        <div class="review">
-          <h3>Mutxo por contar - México</h3>
-          <p>
-            "... una de las piezas vocales más arduas de cantar en la escena
-            rockera: "The great gig in the sky", la cual fue ejecutada
-            soberbiamente por Ángela Cervantes, con los míticos tonos de Clare
-            Torry en el icónico álbum."
-          </p>
-        </div>
-        <div class="review">
-          <h3>Blues Doodles</h3>
-          <p>
-            "The highlight of the evening for me though was Angela Cervantes
-            rendition of 'The Great Gig in The Sky' it was an epic Floyd moment"
-          </p>
-        </div>
-      </div>
-    </section>
-
-    <section class="subscription-section">
-      <h2>¡Suscríbete! Recibe noticias y nuevas fechas de conciertos...</h2>
-      <form id="subscription-form">
-        <input type="email" placeholder="Email" required />
-        <button type="submit">Unirse a nuestra lista de correo</button>
-      </form>
-      <div id="subscription-success" class="hidden">
-        <p>¡Gracias por suscribirte!</p>
-      </div>
-    </section>
-
-    <section class="contact-section">
-      <h2>Contacto</h2>
-      <div class="contact-info">
-        <p>Blumusic Produccions</p>
-        <p>Fede Serrat</p>
-        <p>+34 646 922 582</p>
-        <p>info@blumusic.es</p>
-      </div>
-      <div class="contact-form-container">
-        <form id="contact-form">
-          <input type="text" placeholder="Nombre" required />
-          <input type="email" placeholder="Email" required />
-          <textarea placeholder="Mensaje" required></textarea>
-          <button type="submit">Enviar</button>
-        </form>
-        <div id="contact-success" class="hidden">
-          <p>¡Gracias por tu mensaje!</p>
-        </div>
-      </div>
-    </section>
-
-    <footer class="site-footer">
-      <p>⌾ Ángela Cervantes Art - Noah Shaye Fotografía</p>
-    </footer>
-  </div>
+  </section>
 </Layout>
 
 <style>
-  /* Basic reset and container */
-  .page-content {
-    max-width: 960px;
-    margin: 0 auto;
-    font-family: Arial, sans-serif;
-    color: #333;
+  /* Basic Reset & Fonts */
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  body {
+    font-family: "Helvetica Neue", sans-serif;
     line-height: 1.6;
+   
   }
-
-  /* Typography */
-  h1,
-  h2,
-  h3 {
-    font-weight: normal;
-  }
-
-  h1 {
-    font-size: 2.5rem;
-    margin-bottom: 0.5rem;
-  }
-
-  h2 {
-    font-size: 1.8rem;
-    margin: 2rem 0 1.5rem;
-    text-align: center;
-  }
-
-  h3 {
-    font-size: 1.2rem;
-    margin: 1rem 0 0.5rem;
-  }
-
-  p {
-    margin-bottom: 1rem;
-  }
-
-  /* Header */
-  .site-header {
-    text-align: center;
-    padding: 3rem 1rem;
-  }
-
-  .tagline {
-    font-style: italic;
-    margin-bottom: 2rem;
-  }
-
-  .presskit-buttons {
-    display: flex;
-    justify-content: center;
-    gap: 1rem;
-    flex-wrap: wrap;
-  }
-
-  .presskit-button {
-    display: inline-block;
-    padding: 0.7rem 1.5rem;
+  a {
     text-decoration: none;
-    background-color: #8c2d2d;
-    color: white;
+    color: inherit;
   }
 
-  /* Videos section */
-  .videos-section {
-    margin-bottom: 3rem;
-  }
-
-  .video-list {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 2rem;
-  }
-
-  .video-item {
-    margin-bottom: 1.5rem;
-  }
-
-  .video-thumbnail {
-    position: relative;
-    margin-bottom: 0.5rem;
-  }
-
-  .video-thumbnail img {
-    width: 100%;
-    height: auto;
-  }
-
-  .play-icon {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    background-color: rgba(0, 0, 0, 0.6);
-    color: white;
-    width: 40px;
-    height: 40px;
-    border-radius: 50%;
+  /* Hero Styles */
+  .hero {
     display: flex;
+    flex-direction: column;
     align-items: center;
     justify-content: center;
-  }
-
-  .video-item h3 {
-    font-weight: normal;
     text-align: center;
-    font-size: 1rem;
+ 
+
   }
 
-  /* Concerts section */
-  .concerts-section {
-    margin-bottom: 3rem;
-    padding: 2rem 1rem;
-    background-color: #f9f9f9;
+  .hero-content {
+    max-width: 700px;
+    background-color: #fff;
+    border-radius: 8px;
   }
-
-  .testimonials {
-    max-width: 800px;
-    margin: 0 auto;
+  .hero-social{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 1rem;
+    background-color: #fff;
+    border-radius: 16px;
+    padding: 0.4rem;
   }
-
-  blockquote {
-    position: relative;
-    font-style: italic;
-    margin-bottom: 2rem;
-    padding: 0 2rem;
-  }
-
-  blockquote cite {
-    display: block;
-    text-align: right;
-    margin-top: 1rem;
+  .hero h1 {
+    color: rgb(var(--txt, var(--color_15, color_15))));
+    font: var(--fnt, var(--font_5));
+    transition: var(--trans, color 0.4s ease 0s);
+    white-space: nowrap;
+    font-size: 3rem;
     font-weight: bold;
-    font-style: normal;
+    letter-spacing: 2px;
   }
-
-  /* Biography section */
-  .biography-section {
-    margin-bottom: 3rem;
-  }
-
-  .bio-button-container {
-    text-align: center;
-    margin-bottom: 2rem;
-  }
-
-  .bio-button {
-    display: inline-block;
-    padding: 0.7rem 1.5rem;
-    text-decoration: none;
-    background-color: #8c2d2d;
-    color: white;
-  }
-
-  .bio-quote {
-    max-width: 800px;
-    margin: 0 auto 2rem;
-  }
-
-  /* Albums section */
-  .albums-section {
-    margin-bottom: 3rem;
-    padding: 2rem 1rem;
-    background-color: #f9f9f9;
-  }
-
-  .album-list {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-    gap: 2rem;
-  }
-
-  .album {
-    text-align: center;
-  }
-
-  .album img {
-    max-width: 200px;
-    height: auto;
-    margin-bottom: 0.5rem;
-  }
-
-  .album p {
-    font-size: 0.9rem;
-  }
-
-  .enter-button-container {
-    text-align: center;
-    margin-top: 2rem;
-  }
-
-  .enter-button {
-    display: inline-block;
-    padding: 0.7rem 1.5rem;
-    text-decoration: none;
-    background-color: #8c2d2d;
-    color: white;
-  }
-
-  /* Reviews section */
-  .reviews-section {
-    margin-bottom: 3rem;
-  }
-
-  .review-list {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-    gap: 2rem;
-  }
-
-  .review {
-    text-align: center;
-  }
-
-  .review h3 {
-    color: #8c2d2d;
-  }
-
-  .review p {
-    font-style: italic;
-    font-size: 0.9rem;
-  }
-
-  /* Subscription section */
-  .subscription-section {
-    margin-bottom: 3rem;
-    padding: 2rem 1rem;
-    background-color: #f9f9f9;
-    text-align: center;
-  }
-
-  .subscription-section h2 {
+  .hero h2 {
     font-size: 1.5rem;
-    margin-bottom: 1.5rem;
+    font-weight: 300;
+    margin: 1rem 0;
+    font-style: italic;
   }
-
-  #subscription-form {
-    max-width: 400px;
-    margin: 0 auto;
-    display: flex;
-    flex-direction: column;
-    gap: 1rem;
+  .hero p {
+    margin: 1.5rem 0;
+    font-size: 1.1rem;
+    opacity: 0.9;
   }
-
-  #subscription-form input {
-    padding: 0.7rem;
-    border: 1px solid #ddd;
+  .hero-buttons .btn,
+  .hero-buttons .btn-secondary {
+    display: inline-block;
+    margin: 0.5rem;
+    padding: 0.75rem 1.5rem;
+    border-radius: 4px;
+    transition: all 0.3s ease;
   }
-
-  #subscription-form button {
-    background-color: #8c2d2d;
-    color: white;
-    border: none;
-    padding: 0.7rem;
-    cursor: pointer;
+  .btn {
+    background-color: #ffffff;
+    color: #000;
+    font-weight: bold;
   }
-
-  .hidden {
-    display: none;
+  .btn:hover {
+    background-color: #e0e0e0;
   }
-
-  /* Contact section */
-  .contact-section {
-    margin-bottom: 3rem;
+  .btn-secondary {
+    border: 1px solid #fff;
+    color: #fff;
   }
-
-  .contact-info {
-    text-align: center;
-    margin-bottom: 2rem;
-  }
-
-  .contact-info p {
-    margin: 0.3rem 0;
-  }
-
-  .contact-form-container {
-    max-width: 500px;
-    margin: 0 auto;
-  }
-
-  #contact-form {
-    display: flex;
-    flex-direction: column;
-    gap: 1rem;
-  }
-
-  #contact-form input,
-  #contact-form textarea {
-    padding: 0.7rem;
-    border: 1px solid #ddd;
-  }
-
-  #contact-form textarea {
-    min-height: 150px;
-  }
-
-  #contact-form button {
-    background-color: #8c2d2d;
-    color: white;
-    border: none;
-    padding: 0.7rem;
-    cursor: pointer;
-    align-self: flex-start;
-  }
-
-  /* Footer */
-  .site-footer {
-    text-align: center;
-    padding: 1rem;
-    font-size: 0.9rem;
-    color: #666;
-  }
-
-  /* Mobile adjustments */
-  @media (max-width: 768px) {
-    .video-list,
-    .album-list,
-    .review-list {
-      grid-template-columns: 1fr;
-    }
+  .btn-secondary:hover {
+    background-color: #fff;
+    color: #000;
   }
 </style>
-
-<script>
-  document.addEventListener("DOMContentLoaded", () => {
-    // Subscription form
-    const subscriptionForm = document.getElementById("subscription-form");
-    const subscriptionSuccess = document.getElementById("subscription-success");
-
-    if (subscriptionForm) {
-      subscriptionForm.addEventListener("submit", function (e) {
-        e.preventDefault();
-        subscriptionForm.style.display = "none";
-        if (subscriptionSuccess) {
-          subscriptionSuccess.classList.remove("hidden");
-        }
-      });
-    }
-
-    // Contact form
-    const contactForm = document.getElementById("contact-form");
-    const contactSuccess = document.getElementById("contact-success");
-
-    if (contactForm) {
-      contactForm.addEventListener("submit", function (e) {
-        e.preventDefault();
-        contactForm.style.display = "none";
-        if (contactSuccess) {
-          contactSuccess.classList.remove("hidden");
-        }
-      });
-    }
-  });
-</script>
