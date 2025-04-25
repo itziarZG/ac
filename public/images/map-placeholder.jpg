@@ -1,0 +1,10 @@
+<svg width="800" height="400" xmlns="http://www.w3.org/2000/svg">
+    <rect width="100%" height="100%" fill="#f0f0f0"/>
+    <rect x="10" y="10" width="780" height="380" fill="#e0e0e0" stroke="#cccccc" stroke-width="1"/>
+    <rect x="20" y="20" width="760" height="360" fill="#d9d9d9" stroke="#cccccc" stroke-width="1"/>
+    <line x1="20" y1="200" x2="780" y2="200" stroke="#cccccc" stroke-width="2" stroke-dasharray="5,5"/>
+    <line x1="400" y1="20" x2="400" y2="380" stroke="#cccccc" stroke-width="2" stroke-dasharray="5,5"/>
+    <circle cx="400" cy="200" r="15" fill="#8c2d2d"/>
+    <text x="400" y="200" fill="white" text-anchor="middle" dominant-baseline="middle" font-family="Arial" font-size="14">•</text>
+    <text x="400" y="230" fill="#333333" text-anchor="middle" font-family="Arial" font-size="14" font-weight="bold">Haga clic para cargar el mapa</text>
+</svg> 

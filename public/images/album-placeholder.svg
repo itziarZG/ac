@@ -1,0 +1,7 @@
+<svg width="300" height="300" xmlns="http://www.w3.org/2000/svg">
+    <rect width="100%" height="100%" fill="#8c2d2d"/>
+    <circle cx="150" cy="150" r="100" fill="#2d2d2d"/>
+    <circle cx="150" cy="150" r="30" fill="#f2ebe9"/>
+    <circle cx="150" cy="150" r="10" fill="#8c2d2d"/>
+    <text x="50%" y="230" fill="#ffffff" font-family="Georgia, serif" font-size="20" text-anchor="middle" dominant-baseline="middle">Album Cover</text>
+</svg> 

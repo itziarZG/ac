@@ -1,4 +1,64 @@
-# Astro Starter Kit: Basics
+# AC Web - Static Website
+
+A modern static website built with Astro, using plain HTML, CSS, and JavaScript.
+
+## Features
+
+- ✨ Modern and minimalist design
+- 🚀 Fast performance with minimal JavaScript
+- 📱 Fully responsive layout
+- 🎨 Smooth animations and transitions
+- 📝 Contact form with client-side validation
+- 🖼️ Clean and semantic HTML structure
+
+## Tech Stack
+
+- [Astro](https://astro.build/) - Static site generator
+- Plain HTML, CSS, and JavaScript (no framework)
+- CSS custom properties for theming
+- Intersection Observer API for scroll animations
+
+## Project Structure
+
+```
+/
+├── public/
+│   ├── css/
+│   │   └── styles.css
+│   ├── js/
+│   │   └── main.js
+│   └── favicon.svg
+├── src/
+│   ├── assets/
+│   ├── components/
+│   ├── layouts/
+│   │   └── Layout.astro
+│   └── pages/
+│       ├── index.astro
+│       ├── about.astro
+│       ├── contact.astro
+│       └── 404.astro
+└── package.json
+```
+
+## Getting Started
+
+1. Clone the repository
+2. Install dependencies: `npm install` or `yarn install` or `pnpm install`
+3. Start the development server: `npm run dev` or `yarn dev` or `pnpm dev`
+4. Build for production: `npm run build` or `yarn build` or `pnpm build`
+
+## Custom Features
+
+- **Animations**: CSS animations for page elements
+- **Form Validation**: Client-side validation for the contact form
+- **Responsive Design**: Mobile-first approach with responsive breakpoints
+- **404 Page**: Custom error page
+
+## Credits
+
+- Icons: Native emoji icons
+- Images: [Unsplash](https://unsplash.com/)
 
 ```sh
 pnpm create astro@latest -- --template basics
