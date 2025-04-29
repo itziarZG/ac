@@ -7,8 +7,10 @@ import Layout from "../layouts/Layout.astro";
 
 <Layout>
   <!-- Hero Section -->
-  <section class="flex flex-col justify-center">
-    <div class="m-auto w-3/4 flex justify-between bg-white p-1 rounded-xl">
+  <section class="p-2 flex flex-col items-center text-white">
+    <div
+      class="mx-auto my-1 w-3/4 flex justify-between bg-white text-black p-1 rounded-xl"
+    >
       <a
         href="https://www.facebook.com/angelacervantescantante"
         target="_blank"
@@ -86,188 +88,657 @@ import Layout from "../layouts/Layout.astro";
         </svg>
       </a>
     </div>
-    <h1>Ángela Cervantes</h1>
-    <h2>Bienvenidas, a mi rincón de sueños musicales de raíz...</h2>
-    <div class="hero-buttons">
+    <h1 class="mx-auto mt-4 text-6xl font-sacramento text-green-AC">
+      Ángela Cervantes
+    </h1>
+    <h2
+      class="mx-auto mb-2 text-white font-sacramento text-xl z-10 tracking-wide"
+    >
+      Bienvenidas, a mi rincón de sueños musicales de raíz...
+    </h2>
+    <div class="w-full my-4 flex flex-col items-center font-venir font-light">
       <a
         href="https://blumusic.cat/presskit-arrels-dara/"
-        class="btn"
+        class="p-1 w-fit ml-12 mb-2 text-xl uppercase bg-red-btn tracking-widest rounded-2xl"
         target="_blank"
         rel="noopener noreferrer">ARRELS D'ARA presskit ---></a
       >
       <a
         href="https://blumusic.cat/presskit-olas-y-arenas/"
-        class="btn btn-secondary"
+        class="p-1 w-fit mb-2 text-xl uppercase bg-green-btn rounded-2xl tracking-widest"
         target="_blank"
         rel="noopener noreferrer"
         >OLAS Y ARENAS presskit --->
       </a>
     </div>
   </section>
-  <section class="videos">
-    <h2 class="videos-title">Videos</h2>
-    <div class="video-slider-container">
-      <div class="video-slider">
-        <div class="video-slide">
-          <video
-            width="560"
-            height="315"
-            src="https://www.youtube.com/watch?v=F_tsiiPgDM0&t=2s"
-            title="Ángela Cervantes - Arrels d'Ara"></video>
-        </div>
-        <div class="video-slide">
-          <iframe
-            width="560"
-            height="315"
-            src="https://www.youtube.com/embed/Q1vOQDh5zKY"
-            title="Ángela Cervantes - Olas y Arenas"
-            frameborder="0"
-            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-            allowfullscreen></iframe>
-        </div>
-        <div class="video-slide">
-          <iframe
-            width="560"
-            height="315"
-            src="https://www.youtube.com/embed/2RmFBg1P5_M"
-            title="Ángela Cervantes - Camarón"
-            frameborder="0"
-            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-            allowfullscreen></iframe>
-        </div>
-        <div class="video-slide">
-          <iframe
-            width="560"
-            height="315"
-            src="https://www.youtube.com/embed/zIcjXDCyYJ8"
-            title="Ángela Cervantes - Live"
-            frameborder="0"
-            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-            allowfullscreen></iframe>
-        </div>
-      </div>
-      <button class="slider-nav prev" aria-label="Previous video">
-        <svg
-          xmlns="http://www.w3.org/2000/svg"
-          viewBox="0 0 24 24"
-          width="24"
-          height="24"
+  <!-- Videos Section -->
+  <section class="p-2 flex flex-col items-center">
+    <h2 class="font-sacramento text-6xl tracking-wider">Videos</h2>
+    <div class="carousel w-full">
+      <div id="item1" class="carousel-item w-full">
+        <iframe
+          width="420"
+          height="315"
+          src="https://www.youtube.com/watch?v=QPpQE97_EPQ"
+          title="Ángela Cervantes - Arrels d'Ara"
         >
-          <path
-            d="M15.41 7.41L14 6l-6 6 6 6 1.41-1.41L10.83 12z"
-            fill="currentColor"></path>
-        </svg>
-      </button>
-      <button class="slider-nav next" aria-label="Next video">
-        <svg
-          xmlns="http://www.w3.org/2000/svg"
-          viewBox="0 0 24 24"
-          width="24"
-          height="24"
-        >
-          <path
-            d="M10 6L8.59 7.41 13.17 12l-4.58 4.59L10 18l6-6z"
-            fill="currentColor"></path>
-        </svg>
-      </button>
-    </div>
-  </section>
-  <section class="concerts">
-    <h2 class="concerts-title">Conciertos</h2>
-    <div class="concerts-grid">
-      <div class="concert-card">
-        <div class="concert-date">
-          <span class="day">15</span>
-          <span class="month">JUN</span>
-          <span class="year">2025</span>
-        </div>
-        <div class="concert-info">
-          <h3>Festival de Jazz de Barcelona</h3>
-          <p class="venue">Palau de la Música, Barcelona</p>
-          <p class="project">Ángela Cervantes Trio - "Arrels d'Ara"</p>
-          <div class="concert-links">
-            <a href="#" class="ticket-btn">Entradas</a>
-            <a href="#" class="info-btn">+ Info</a>
-          </div>
-        </div>
+        </iframe>
       </div>
-
-      <div class="concert-card">
-        <div class="concert-date">
-          <span class="day">22</span>
-          <span class="month">JUL</span>
-          <span class="year">2025</span>
-        </div>
-        <div class="concert-info">
-          <h3>Festival Jazz Costa Brava</h3>
-          <p class="venue">Jardines de Cap Roig, Calella de Palafrugell</p>
-          <p class="project">Ángela Cervantes & Manel Fortià</p>
-          <div class="concert-links">
-            <a href="#" class="ticket-btn">Entradas</a>
-            <a href="#" class="info-btn">+ Info</a>
-          </div>
-        </div>
+      <div id="item2" class="carousel-item w-full">
+        <iframe
+          width="560"
+          height="315"
+          src="https://www.youtube.com/embed/Q1vOQDh5zKY"
+          title="Ángela Cervantes - Olas y Arenas"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+          allowfullscreen></iframe>
       </div>
-
-      <div class="concert-card">
-        <div class="concert-date">
-          <span class="day">10</span>
-          <span class="month">AGO</span>
-          <span class="year">2025</span>
-        </div>
-        <div class="concert-info">
-          <h3>Noches de Verano Ibiza</h3>
-          <p class="venue">Plaza del Parque, Ibiza</p>
-          <p class="project">Ángela Cervantes - "Olas y Arenas"</p>
-          <div class="concert-links">
-            <a href="#" class="ticket-btn">Entradas</a>
-            <a href="#" class="info-btn">+ Info</a>
-          </div>
-        </div>
+      <div id="item3" class="carousel-item w-full">
+        <iframe
+          width="560"
+          height="315"
+          src="https://www.youtube.com/embed/2RmFBg1P5_M"
+          title="Ángela Cervantes - Camarón"
+          frameborder="0"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+          allowfullscreen></iframe>
       </div>
-
-      <div class="concert-card">
-        <div class="concert-date">
-          <span class="day">25</span>
-          <span class="month">SEP</span>
-          <span class="year">2025</span>
-        </div>
-        <div class="concert-info">
-          <h3>Jazz en la Villa</h3>
-          <p class="venue">Teatro Español, Madrid</p>
-          <p class="project">Ángela Cervantes Quintet</p>
-          <div class="concert-links">
-            <a href="#" class="ticket-btn">Entradas</a>
-            <a href="#" class="info-btn">+ Info</a>
-          </div>
-        </div>
+      <div id="item4" class="carousel-item w-full">
+        <iframe
+          width="560"
+          height="315"
+          src="https://www.youtube.com/embed/zIcjXDCyYJ8"
+          title="Ángela Cervantes - Live"
+          frameborder="0"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+          allowfullscreen></iframe>
       </div>
     </div>
+    <div class="flex w-full justify-center gap-2 py-2">
+      <a href="#item1" class="btn btn-xs opacity-60 rounded-2xl">1</a>
+      <a href="#item2" class="btn btn-xs opacity-60 rounded-2xl">2</a>
+      <a href="#item3" class="btn btn-xs opacity-60 rounded-2xl">3</a>
+      <a href="#item4" class="btn btn-xs opacity-60 rounded-2xl">4</a>
+    </div>
   </section>
-  <section class="comments">
-    <article class="comments-article">
-      <h3>Chucho Valdés,</h3>
-      <h4>sobre el álbum Camino a Santa Clara</h4>
-      <p class="italic-words">
-        -“Se trata de un trabajo fresco, novedoso, tradicional y al mismo tiempo
-        contemporáneo, respetando la raíz de su origen. Los arreglos, los solos
-        y especialmente la vocalista Ángela Cervantes son maravillosos.”
+  <!--concerts section -->
+  <section class="p-2 flex flex-col items-center">
+    <h2 class="font-sacramento text-6xl tracking-wider">Conciertos</h2>
+    <div
+      class="grid grid-cols-1 sm:grid-cols-auto-fill minmax(280px, 1fr) gap-6"
+    >
+      <article
+        class="bg-white bg-opacity-90 rounded-xl overflow-hidden flex shadow-lg transition-transform duration-300 ease-in-out hover:translate-y-[-5px] hover:shadow-xl"
+      >
+        <div
+          class="bg-green-700 text-white p-4 flex flex-col items-center justify-center min-w-[80px] text-center"
+        >
+          <span class="text-3xl font-bold leading-none">15</span>
+          <span class="text-base font-semibold mt-0.5">JUN</span>
+          <span class="text-sm opacity-80 mt-0.5">2025</span>
+        </div>
+        <div class="p-4 flex-1 flex flex-col">
+          <h3 class="font-['Raleway'] text-lg text-gray-800 m-0 mb-1">
+            Festival de Jazz de Barcelona
+          </h3>
+          <p class="text-sm text-gray-600 m-0 mb-0.5">
+            Palau de la Música, Barcelona
+          </p>
+          <p class="text-sm text-green-700 italic m-0 mb-3">
+            Ángela Cervantes Trio - "Arrels d'Ara"
+          </p>
+          <div class="mt-auto flex gap-2">
+            <a
+              href="#"
+              class="text-sm py-1.5 px-3 rounded-full text-center no-underline transition-all duration-200 ease-in-out bg-red-500 text-white flex-1 hover:bg-red-400"
+              >Entradas</a
+            >
+            <a
+              href="#"
+              class="text-sm py-1.5 px-3 rounded-full text-center no-underline transition-all duration-200 ease-in-out bg-gray-200 text-gray-800 hover:bg-gray-300"
+              >+ Info</a
+            >
+          </div>
+        </div>
+      </article>
+
+      <article
+        class="bg-white bg-opacity-90 rounded-xl overflow-hidden flex shadow-lg transition-transform duration-300 ease-in-out hover:translate-y-[-5px] hover:shadow-xl"
+      >
+        <div
+          class="bg-green-700 text-white p-4 flex flex-col items-center justify-center min-w-[80px] text-center"
+        >
+          <span class="text-3xl font-bold leading-none">22</span>
+          <span class="text-base font-semibold mt-0.5">JUL</span>
+          <span class="text-sm opacity-80 mt-0.5">2025</span>
+        </div>
+        <div class="p-4 flex-1 flex flex-col">
+          <h3 class="font-['Raleway'] text-lg text-gray-800 m-0 mb-1">
+            Festival Jazz Costa Brava
+          </h3>
+          <p class="text-sm text-gray-600 m-0 mb-0.5">
+            Jardines de Cap Roig, Calella de Palafrugell
+          </p>
+          <p class="text-sm text-green-700 italic m-0 mb-3">
+            Ángela Cervantes & Manel Fortià
+          </p>
+          <div class="mt-auto flex gap-2">
+            <a
+              href="#"
+              class="text-sm py-1.5 px-3 rounded-full text-center no-underline transition-all duration-200 ease-in-out bg-red-500 text-white flex-1 hover:bg-red-400"
+              >Entradas</a
+            >
+            <a
+              href="#"
+              class="text-sm py-1.5 px-3 rounded-full text-center no-underline transition-all duration-200 ease-in-out bg-gray-200 text-gray-800 hover:bg-gray-300"
+              >+ Info</a
+            >
+          </div>
+        </div>
+      </article>
+
+      <article
+        class="bg-white bg-opacity-90 rounded-xl overflow-hidden flex shadow-lg transition-transform duration-300 ease-in-out hover:translate-y-[-5px] hover:shadow-xl"
+      >
+        <div
+          class="bg-green-700 text-white p-4 flex flex-col items-center justify-center min-w-[80px] text-center"
+        >
+          <span class="text-3xl font-bold leading-none">10</span>
+          <span class="text-base font-semibold mt-0.5">AGO</span>
+          <span class="text-sm opacity-80 mt-0.5">2025</span>
+        </div>
+        <div class="p-4 flex-1 flex flex-col">
+          <h3 class="font-['Raleway'] text-lg text-gray-800 m-0 mb-1">
+            Noches de Verano Ibiza
+          </h3>
+          <p class="text-sm text-gray-600 m-0 mb-0.5">
+            Plaza del Parque, Ibiza
+          </p>
+          <p class="text-sm text-green-700 italic m-0 mb-3">
+            Ángela Cervantes - "Olas y Arenas"
+          </p>
+          <div class="mt-auto flex gap-2">
+            <a
+              href="#"
+              class="text-sm py-1.5 px-3 rounded-full text-center no-underline transition-all duration-200 ease-in-out bg-red-500 text-white flex-1 hover:bg-red-400"
+              >Entradas</a
+            >
+            <a
+              href="#"
+              class="text-sm py-1.5 px-3 rounded-full text-center no-underline transition-all duration-200 ease-in-out bg-gray-200 text-gray-800 hover:bg-gray-300"
+              >+ Info</a
+            >
+          </div>
+        </div>
+      </article>
+
+      <article
+        class="bg-white bg-opacity-90 rounded-xl overflow-hidden flex shadow-lg transition-transform duration-300 ease-in-out hover:translate-y-[-5px] hover:shadow-xl"
+      >
+        <div
+          class="bg-green-700 text-white p-4 flex flex-col items-center justify-center min-w-[80px] text-center"
+        >
+          <span class="text-3xl font-bold leading-none">25</span>
+          <span class="text-base font-semibold mt-0.5">SEP</span>
+          <span class="text-sm opacity-80 mt-0.5">2025</span>
+        </div>
+        <div class="p-4 flex-1 flex flex-col">
+          <h3 class="font-['Raleway'] text-lg text-gray-800 m-0 mb-1">
+            Jazz en la Villa
+          </h3>
+          <p class="text-sm text-gray-600 m-0 mb-0.5">Teatro Español, Madrid</p>
+          <p class="text-sm text-green-700 italic m-0 mb-3">
+            Ángela Cervantes Quintet
+          </p>
+          <div class="mt-auto flex gap-2">
+            <a
+              href="#"
+              class="text-sm py-1.5 px-3 rounded-full text-center no-underline transition-all duration-200 ease-in-out bg-red-500 text-white flex-1 hover:bg-red-400"
+              >Entradas</a
+            >
+            <a
+              href="#"
+              class="text-sm py-1.5 px-3 rounded-full text-center no-underline transition-all duration-200 ease-in-out bg-gray-200 text-gray-800 hover:bg-gray-300"
+              >+ Info</a
+            >
+          </div>
+        </div>
+      </article>
+    </div>
+  </section>
+  <!-- section comments -->
+  <section
+    class="flex flex-col items-center md:flex-row md:justify-center md:gap-8"
+  >
+    <article
+      class="flex flex-col items-center text-center max-w-md py-12 md:mb-0
+  bg-gradient-to-br from-green-700/60 to-red-500/60 p-6 rounded-lg"
+    >
+      <div
+        class="text-white text-center font-avenir font-light text-xl leading-normal mb-4"
+      >
+        <p class="font-light">
+          -“Se trata de un trabajo fresco, novedoso, tradicional y al mismo
+          tiempo contemporáneo, respetando la raíz de su origen. Los arreglos,
+          los solos y especialmente la vocalista Ángela Cervantes son
+          maravillosos.”
+        </p>
+      </div>
+      <div class="text-center">
+        <p class="text-comment-title font-bold mb-0">Chucho Valdés,</p>
+        <p class="font-avenir text-lg font-light">
+          sobre el álbum Camino a Santa Clara
+        </p>
+      </div>
+    </article>
+    <article
+      class="flex flex-col items-center text-center max-w-md py-12 md:mb-0
+bg-gradient-to-br from-green-700/60 to-red-500/60 p-6 rounded-lg"
+    >
+      <div
+        class="text-white text-center font-avenir font-light text-xl leading-normal mb-4"
+      >
+        <p class="font-light">
+          "El milagro de una buena voz, aparte de años de técnica y estudios, es
+          aquella que con su personalidad te hace olvidar los problemas diarios
+          con los que nos toca convivir, que te enamora, te duelen o te hace
+          viajar."
+        </p>
+      </div>
+      <div class="text-center">
+        <p class="text-comment-title font-bold mb-0">
+          Antonio M. Beneyto. Diario El Mundo
+        </p>
+        <p class="font-avenir text-lg font-light">
+          sobre un concierto de En esta Orilla de Drexler
+        </p>
+      </div>
+    </article>
+  </section>
+  <!-- bio section -->
+  <section class="flex justify-center">
+    <article
+      class="flex flex-col items-center text-center max-w-md py-12 md:mb-0
+  bg-gradient-to-br from-green-700/40 to-red-500/40 p-6 rounded-lg font-avenir"
+    >
+      <h2
+        class="font-sacramento text-6xl leading-normal text-white tracking-wide mb-8"
+      >
+        Biografía
+      </h2>
+      <div class="text-sm leading-normal mb-8">
+        <a
+          href="https://innervisionsfactory.wixsite.com/angelacervantes/biografia"
+          target="_blank"
+          class="text-gray-300 hover:underline tracking-wide"
+        >
+          Bio Completa
+        </a>
+        <a
+          href="https://innervisionsfactory.wixsite.com/angelacervantes/biografia"
+          target="_blank"
+          class="text-green-500 underline tracking-wide"
+        >
+          AQUÍ
+        </a>
+      </div>
+
+      <div class="text-xl leading-normal text-justify mb-6">
+        <p class="font-light text-white">
+          "Como persona y como artista, Ángela Cervantes tiene la excepcional
+          capacidad de transformar lo tosco y rudo de nuestra vida cotidiana, en
+          algo bello y digno de admirar. Bondad y luz emanan inagotables de su
+          interior, e impiden que el demoledor transcurso de la costumbre y la
+          rutina, arruinen el encanto, la magia, la poética y la ilusión de
+          luchar por un mundo mejor. Esta condición, determina inevitablemente
+          el resultado de su música. Además de apreciarse en ella un dominio
+          técnico y expresivo abrumador, con todo su coraje, Ángela consigue
+          difundir un mensaje lleno de confianza y esperanza. Sin duda alguna,
+          cualquier persona que la escuche cantar, se llevará mucho más de lo
+          que traía."
+        </p>
+      </div>
+
+      <div class="text-lg leading-normal text-center">
+        <p class="font-bold text-orange-100">
+          María Hidalgo - Escritora y Directora de la Escuela de Artes de
+          Madrid, TAI
+        </p>
+      </div>
+    </article>
+  </section>
+  <!-- albums section -->
+  <section class="px-4 py-12">
+    <div class="flex flex-wrap justify-center gap-8 mb-12">
+      <div class="w-48 h-48 overflow-hidden rounded-lg shadow-lg">
+        <a
+          href="https://innervisionsfactory.wixsite.com/angelacervantes/en-esta-orilla-de-drexler"
+          target="_self"
+          class="block w-full h-full"
+        >
+          <img
+            loading="lazy"
+            src="https://static.wixstatic.com/media/4b5c34_33a4f43be52541faaa9f99324a3f6862~mv2.jpg/v1/crop/x_7,y_0,w_1540,h_1471/fill/w_150,h_144,al_c,q_80,usm_0.66_1.00_0.01,enc_avif,quality_auto/A%25CC%2581ngela%2520Cervantes%2520portada%2520con%2520nombre%2520copia_edited.jpg"
+            alt="Portada del álbum debut, En esta Orilla de Drexler 2012"
+            class="object-cover w-full h-full"
+          />
+        </a>
+      </div>
+      <div class="w-48 h-48 overflow-hidden rounded-lg shadow-lg">
+        <a
+          href="https://www.youkalimusic.com/index.php/catalogo/153-recordando-a-ella-fitzgerald-joe-pass"
+          target="_blank"
+          rel="noreferrer noopener"
+          class="block w-full h-full"
+        >
+          <img
+            loading="lazy"
+            src="https://static.wixstatic.com/media/4b5c34_6e02c840d7354d7b8e5e4217bdabd2a2~mv2.jpg/v1/fill/w_140,h_140,al_c,q_80,usm_0.66_1.00_0.01,enc_avif,quality_auto/ella%2520%26%2520joe.jpg"
+            alt="Portada del Álbum, Recordando a Ella Fitzgerald & Joe Pass (junto a Chema Saiz)"
+            class="object-cover w-full h-full"
+          />
+        </a>
+      </div>
+      <div class="w-48 h-48 overflow-hidden rounded-lg shadow-lg">
+        <a
+          href="https://www.youkalimusic.com/index.php/catalogo/153-recordando-a-ella-fitzgerald-joe-pass"
+          target="_blank"
+          rel="noreferrer noopener"
+          class="block w-full h-full"
+        >
+          <img
+            loading="lazy"
+            src="https://static.wixstatic.com/media/4b5c34_6e02c840d7354d7b8e5e4217bdabd2a2~mv2.jpg/v1/fill/w_140,h_140,al_c,q_80,usm_0.66_1.00_0.01,enc_avif,quality_auto/ella%2520%26%2520joe.jpg"
+            alt="Portada del Álbum, Recordando a Ella Fitzgerald & Joe Pass (junto a Chema Saiz)"
+            class="object-cover w-full h-full"
+          />
+        </a>
+      </div>
+      <div class="w-48 h-48 overflow-hidden rounded-lg shadow-lg">
+        <a
+          href="https://www.youkalimusic.com/index.php/catalogo/153-recordando-a-ella-fitzgerald-joe-pass"
+          target="_blank"
+          rel="noreferrer noopener"
+          class="block w-full h-full"
+        >
+          <img
+            loading="lazy"
+            src="https://static.wixstatic.com/media/4b5c34_6e02c840d7354d7b8e5e4217bdabd2a2~mv2.jpg/v1/fill/w_140,h_140,al_c,q_80,usm_0.66_1.00_0.01,enc_avif,quality_auto/ella%2520%26%2520joe.jpg"
+            alt="Portada del Álbum, Recordando a Ella Fitzgerald & Joe Pass (junto a Chema Saiz)"
+            class="object-cover w-full h-full"
+          />
+        </a>
+      </div>
+    </div>
+
+    <div class="flex justify-center mt-8">
+      <a
+        href="albums"
+        target="_self"
+        class="inline-flex items-center px-6 py-3 bg-green-700 text-white font-semibold rounded-full shadow-md
+     hover:bg-green-600 transition-colors duration-300 ease-in-out"
+      >
+        <span>Entra</span>
+        <span class="ml-2 w-5 h-5 text-white">
+          <svg
+            data-bbox="9 70.9 181 59"
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 200 200"
+            fill="currentColor"
+          >
+            <g>
+              <path
+                d="M159 70.9l-2.2 2.4L183.6 99H9v3h174.6l-26.2 25.3 2.1 2.6 30.5-29.3-31-29.7z"
+              ></path>
+            </g>
+          </svg>
+        </span>
+      </a>
+    </div>
+  </section>
+  <!-- more comments section -->
+  <section
+    class="px-4 py-12 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8"
+  >
+    <article
+      class="flex flex-col items-center text-center p-6 rounded-lg shadow-lg text-white
+    bg-gradient-to-br from-blue-700/70 to-cyan-500/70"
+    >
+      <h3
+        class="text-lg font-bold leading-tight tracking-normal mb-4 text-gray-200"
+      >
+        La Shica
+      </h3>
+      <div class="w-10 h-10 text-white mb-4">
+        <svg
+          preserveAspectRatio="none"
+          data-bbox="0 19.7 200 161.209"
+          xmlns="http://www.w3.org/2000/svg"
+          viewBox="0 19.7 200 161.209"
+          role="presentation"
+          aria-hidden="true"
+          fill="currentColor"
+        >
+          <g>
+            <path
+              d="M78.2 19.8L85.7 33c.8 1.4 1.7 2.9 2.7 4.5-3.9 2.3-7.7 4.7-11.5 6.9-12.7 7.3-24.2 16.2-33.4 27.8-8.9 11.2-13 24.1-14.3 38.5 4.4 0 8.6-.4 12.8.1 6.8.7 13.9 1.1 20.3 3.3 13.1 4.4 19.5 14.3 20.7 27.9.6 7.4-.5 14.4-4.2 20.9-7.8 13.6-20.5 19.7-37.3 17.5-21.8-2.6-33.5-13.5-38.7-36.3-1.2-5.3-1.9-10.7-2.8-16v-15.4c.2-.6.5-1.2.6-1.9 1-10 4-19.3 8.8-28.1 11.1-20.4 27-36.3 46.3-48.9 7.2-4.7 14.5-9.4 21.8-14.1.2.1.4.1.7.1z"
+            ></path>
+            <path
+              d="M189.4 19.8c3.5 5.8 6.9 11.6 10.6 17.8-1.7 1-3.4 2.1-5.1 3-13.4 7.8-26.3 16.1-36.8 27.9-10.7 12-15.9 26-17.4 42.3 1.4 0 2.8-.1 4.2 0 8.3.6 16.8.2 24.8 2.1 18.9 4.4 26.1 18.9 24.8 36.6-1.3 16.9-15.3 30.5-31.9 31.3-12.2.6-23.9-1.1-33.5-9.5-8.7-7.6-12.6-17.9-15.1-28.8-7.2-32.2 2.1-59.7 23.9-83.6 11-12 23.8-21.8 37.6-30.3 4.5-2.8 8.8-5.8 13.3-8.8h.6z"
+            ></path>
+          </g>
+        </svg>
+      </div>
+
+      <p class="text-base leading-tight tracking-normal text-white">
+        “La primera vez que la vi cantar en directo, no pude cerrar la boca en
+        todo el concierto... No entendía cómo alguien tan joven, podía tener
+        todo eso dentro. Si cierras los ojos cuando ella está cantando, puedes
+        sentir cómo las más grandes divas de la canción desfilan por su
+        garganta..."
+      </p>
+    </article>
+
+    <article
+      class="flex flex-col items-center text-center p-6 rounded-lg shadow-lg text-white
+     bg-gradient-to-br from-purple-700/70 to-pink-500/70"
+    >
+      <h3
+        class="text-base font-bold leading-tight tracking-wide mb-4 text-green-500"
+      >
+        North West End Press
+      </h3>
+      <div class="w-10 h-10 text-white mb-4">
+        <svg
+          preserveAspectRatio="none"
+          data-bbox="0 19.7 200 161.209"
+          xmlns="http://www.w3.org/2000/svg"
+          viewBox="0 19.7 200 161.209"
+          role="presentation"
+          aria-hidden="true"
+          fill="currentColor"
+        >
+          <g>
+            <path
+              d="M78.2 19.8L85.7 33c.8 1.4 1.7 2.9 2.7 4.5-3.9 2.3-7.7 4.7-11.5 6.9-12.7 7.3-24.2 16.2-33.4 27.8-8.9 11.2-13 24.1-14.3 38.5 4.4 0 8.6-.4 12.8.1 6.8.7 13.9 1.1 20.3 3.3 13.1 4.4 19.5 14.3 20.7 27.9.6 7.4-.5 14.4-4.2 20.9-7.8 13.6-20.5 19.7-37.3 17.5-21.8-2.6-33.5-13.5-38.7-36.3-1.2-5.3-1.9-10.7-2.8-16v-15.4c.2-.6.5-1.2.6-1.9 1-10 4-19.3 8.8-28.1 11.1-20.4 27-36.3 46.3-48.9 7.2-4.7 14.5-9.4 21.8-14.1.2.1.4.1.7.1z"
+            ></path>
+            <path
+              d="M189.4 19.8c3.5 5.8 6.9 11.6 10.6 17.8-1.7 1-3.4 2.1-5.1 3-13.4 7.8-26.3 16.1-36.8 27.9-10.7 12-15.9 26-17.4 42.3 1.4 0 2.8-.1 4.2 0 8.3.6 16.8.2 24.8 2.1 18.9 4.4 26.1 18.9 24.8 36.6-1.3 16.9-15.3 30.5-31.9 31.3-12.2.6-23.9-1.1-33.5-9.5-8.7-7.6-12.6-17.9-15.1-28.8-7.2-32.2 2.1-59.7 23.9-83.6 11-12 23.8-21.8 37.6-30.3 4.5-2.8 8.8-5.8 13.3-8.8h.6z"
+            ></path>
+          </g>
+        </svg>
+      </div>
+
+      <p class="text-base leading-tight tracking-normal text-white">
+        “Angela Cervantes, who takes on the indefinable role of Clare Torry in
+        ‘Great Gig in the Sky’ is superb in her unearthly rendition”&nbsp;
+      </p>
+    </article>
+
+    <article
+      class="flex flex-col items-center text-center p-6 rounded-lg shadow-lg text-white
+     bg-gradient-to-br from-teal-700/70 to-emerald-500/70"
+    >
+      <h3
+        class="text-base font-bold leading-tight tracking-wide mb-4 text-green-500"
+      >
+        Mutxo por contar - México
+      </h3>
+      <div class="w-10 h-10 text-white mb-4">
+        <svg
+          preserveAspectRatio="none"
+          data-bbox="0 19.7 200 161.209"
+          xmlns="http://www.w3.org/2000/svg"
+          viewBox="0 19.7 200 161.209"
+          role="presentation"
+          aria-hidden="true"
+          fill="currentColor"
+        >
+          <g>
+            <path
+              d="M78.2 19.8L85.7 33c.8 1.4 1.7 2.9 2.7 4.5-3.9 2.3-7.7 4.7-11.5 6.9-12.7 7.3-24.2 16.2-33.4 27.8-8.9 11.2-13 24.1-14.3 38.5 4.4 0 8.6-.4 12.8.1 6.8.7 13.9 1.1 20.3 3.3 13.1 4.4 19.5 14.3 20.7 27.9.6 7.4-.5 14.4-4.2 20.9-7.8 13.6-20.5 19.7-37.3 17.5-21.8-2.6-33.5-13.5-38.7-36.3-1.2-5.3-1.9-10.7-2.8-16v-15.4c.2-.6.5-1.2.6-1.9 1-10 4-19.3 8.8-28.1 11.1-20.4 27-36.3 46.3-48.9 7.2-4.7 14.5-9.4 21.8-14.1.2.1.4.1.7.1z"
+            ></path>
+            <path
+              d="M189.4 19.8c3.5 5.8 6.9 11.6 10.6 17.8-1.7 1-3.4 2.1-5.1 3-13.4 7.8-26.3 16.1-36.8 27.9-10.7 12-15.9 26-17.4 42.3 1.4 0 2.8-.1 4.2 0 8.3.6 16.8.2 24.8 2.1 18.9 4.4 26.1 18.9 24.8 36.6-1.3 16.9-15.3 30.5-31.9 31.3-12.2.6-23.9-1.1-33.5-9.5-8.7-7.6-12.6-17.9-15.1-28.8-7.2-32.2 2.1-59.7 23.9-83.6 11-12 23.8-21.8 37.6-30.3 4.5-2.8 8.8-5.8 13.3-8.8h.6z"
+            ></path>
+          </g>
+        </svg>
+      </div>
+
+      <p class="text-base leading-tight tracking-normal text-white">
+        -“... una de las piezas vocales más arduas de cantar en la escena
+        rockera: “The great gig in the sky”, la cual fue ejecutada soberbiamente
+        por Ángela Cervantes, con los míticos tonos de Clare Torry en el icónico
+        álbum.”&nbsp;
+      </p>
+    </article>
+
+    <article
+      class="flex flex-col items-center text-center p-6 rounded-lg shadow-lg text-white
+     bg-gradient-to-br from-red-700/70 to-orange-500/70"
+    >
+      <h3
+        class="text-lg font-bold leading-tight tracking-wide mb-4 text-green-500"
+      >
+        Blues Doodles
+      </h3>
+      <div class="w-10 h-10 text-white mb-4">
+        <svg
+          preserveAspectRatio="none"
+          data-bbox="0 19.7 200 161.209"
+          xmlns="http://www.w3.org/2000/svg"
+          viewBox="0 19.7 200 161.209"
+          role="presentation"
+          aria-hidden="true"
+          fill="currentColor"
+        >
+          <g>
+            <path
+              d="M78.2 19.8L85.7 33c.8 1.4 1.7 2.9 2.7 4.5-3.9 2.3-7.7 4.7-11.5 6.9-12.7 7.3-24.2 16.2-33.4 27.8-8.9 11.2-13 24.1-14.3 38.5 4.4 0 8.6-.4 12.8.1 6.8.7 13.9 1.1 20.3 3.3 13.1 4.4 19.5 14.3 20.7 27.9.6 7.4-.5 14.4-4.2 20.9-7.8 13.6-20.5 19.7-37.3 17.5-21.8-2.6-33.5-13.5-38.7-36.3-1.2-5.3-1.9-10.7-2.8-16v-15.4c.2-.6.5-1.2.6-1.9 1-10 4-19.3 8.8-28.1 11.1-20.4 27-36.3 46.3-48.9 7.2-4.7 14.5-9.4 21.8-14.1.2.1.4.1.7.1z"
+            ></path>
+            <path
+              d="M189.4 19.8c3.5 5.8 6.9 11.6 10.6 17.8-1.7 1-3.4 2.1-5.1 3-13.4 7.8-26.3 16.1-36.8 27.9-10.7 12-15.9 26-17.4 42.3 1.4 0 2.8-.1 4.2 0 8.3.6 16.8.2 24.8 2.1 18.9 4.4 26.1 18.9 24.8 36.6-1.3 16.9-15.3 30.5-31.9 31.3-12.2.6-23.9-1.1-33.5-9.5-8.7-7.6-12.6-17.9-15.1-28.8-7.2-32.2 2.1-59.7 23.9-83.6 11-12 23.8-21.8 37.6-30.3 4.5-2.8 8.8-5.8 13.3-8.8h.6z"
+            ></path>
+          </g>
+        </svg>
+      </div>
+
+      <p class="text-base leading-tight tracking-normal text-white">
+        -“The highlight of the evening for me though was Angela Cervantes
+        rendition of ‘The Great Gig in The Sky’ it was an epic Floyd
+        moment”&nbsp;
       </p>
     </article>
   </section>
-  <section class="albums"></section>
-  <section class="more-comments">
-    <article></article>
-    <article></article>
-    <article></article>
-    <article></article>
-    <section class="contact">
-      <form></form>
-    </section>
+  <!-- contact section -->
+  <section class="px-4 py-12 flex justify-center">
+    <div class="w-full max-w-lg text-center text-white">
+      <h2
+        class="font-['sacramento'] text-5xl md:text-6xl leading-normal text-orange-100 tracking-tight mb-8"
+      >
+        Contacto
+      </h2>
+
+      <div class="text-base leading-normal tracking-wide text-gray-100 mb-8">
+        <!-- <p class="font-bold">Blumusic Produccions</p>
+        <p class="font-light mt-2">Fede Serrat</p> -->
+        <p class="font-light mt-1">
+          <a
+            data-auto-recognition="true"
+            href="tel:+34 646 922 582"
+            class="hover:underline">+34 646 333 333</a
+          >
+        </p>
+        <p class="font-light mt-1">
+          <a
+            data-auto-recognition="true"
+            href="mailto:info@blumusic.es"
+            class="hover:underline">info@angerlacervant.es</a
+          >
+        </p>
+      </div>
+
+      <form
+        id="contactForm"
+        class="flex flex-col gap-4 w-full"
+        method="POST"
+        action="/your-form-handler-url"
+      >
+        <input
+          name="nombre"
+          type="text"
+          placeholder="Nombre"
+          required
+          aria-label="Nombre"
+          class="w-full p-3 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-green-500 focus:border-green-500
+                  text-gray-900 placeholder-gray-500 bg-white"
+        />
+        <input
+          name="email"
+          type="email"
+          placeholder="Email"
+          required
+          aria-label="Email"
+          pattern="^.+@.+\.[a-zA-Z]{2,63}$"
+          class="w-full p-3 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-green-500 focus:border-green-500
+                  text-gray-900 placeholder-gray-500 bg-white"
+        />
+        <input
+          name="asunto"
+          type="text"
+          placeholder="Asunto"
+          aria-label="Asunto"
+          class="w-full p-3 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-green-500 focus:border-green-500
+                  text-gray-900 placeholder-gray-500 bg-white"
+        />
+        <textarea
+          name="mensaje"
+          placeholder="Escribe tu mensaje aquí..."
+          aria-label="Mensaje"
+          rows="6"
+          class="w-full p-3 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-green-500 focus:border-green-500
+                     text-gray-900 placeholder-gray-500 bg-white"
+        ></textarea>
+        <button
+          type="submit"
+          aria-label="Enviar"
+          class="mt-4 px-6 py-3 bg-green-700 text-white font-semibold rounded-full shadow-md
+                   hover:bg-green-600 transition-colors duration-300 ease-in-out self-center"
+        >
+          Enviar
+        </button>
+
+        <div
+          id="successMessage"
+          class="mt-4 text-center text-sm text-black hidden"
+        >
+          <p>¡Gracias por tu mensaje!</p>
+        </div>
+      </form>
+    </div>
   </section>
 </Layout>
-
-<style></style>
 
 <script>
   document.addEventListener("DOMContentLoaded", () => {

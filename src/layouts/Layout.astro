@@ -23,22 +23,15 @@ import "./src/styles/global.css";
       rel="stylesheet"
     />
     <script src="/js/main.js" defer></script>
-    <style>
-      /* Fallback if the image doesn't load */
-      body {
-        background: linear-gradient(135deg, #f5f1e9 0%, #e9d5c3 100%);
-        margin: 0;
-        padding: 0;
-        min-height: 100vh;
-      }
-    </style>
   </head>
   <body>
-    <main class="bg-[url(/images/hero-bg-mobile.webp)] bg-top p-2">
+    <main
+      class="bg-[url(/images/hero-bg-mobile.webp)] bg-top bg-fixed text-white"
+    >
       <slot />
     </main>
 
-    <footer>
+    <footer class="bg-white text-sm text-gray-500">
       <!-- <div class="footer-content">
         <div class="footer-social">
           <h3>Follow Me</h3>
@@ -137,11 +130,10 @@ import "./src/styles/global.css";
           <p>info@blumusic.es</p>
         </div>
       </div> -->
-      <div class="footer-copyright">
-        <p>
-          &copy; {new Date().getFullYear()} Ángela Cervantes. All rights reserved.
-        </p>
-      </div>
+
+      <p>
+        &copy; {new Date().getFullYear()} Ángela Cervantes Art - Noah Shaye Fotografía
+      </p>
     </footer>
 
     <script>
@@ -193,5 +185,3 @@ import "./src/styles/global.css";
     </script>
   </body>
 </html>
-
-<style></style>
