@@ -1,41 +1,109 @@
-.social-icons {
-  display: flex;
-  gap: 10px;
-  margin-top: 10px;
-  justify-content: center;
-  flex-wrap: wrap;
-}
+@import "tailwindcss";
+@plugin "daisyui";
 
-.social-icon {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  width: 42px;
-  height: 42px;
-  border-radius: 50%;
-  background-color: rgba(255, 255, 255, 0.1);
-  color: white;
-  text-decoration: none;
-  transition: all 0.3s ease;
-}
+@theme {
+  --color-green-AC: #60977b;
+  --color-red-btn: rgb(255, 97, 97);
+  --color-green-btn: rgb(63, 118, 82);
+  --color-white: rgb(255, 241, 219);
+  --color-agenda: rgba(255, 255, 255, 0.9);
+  --color-agenda-date: rgb();
+  --color-agenda-title: #333;
+  --color-agenda-venue: #555;
+  --color-comment-title: rgb(252, 182, 76);
 
-.social-icon svg {
-  width: 24px;
-  height: 24px;
-  transition: transform 0.3s ease;
+  --font-avenir: "Avenir", "sans-serif";
+  --font-sacramento: "Sacramento", "sans-serif";
+  --font-raleway: "Raleway", "sans-serif";
 }
-
-.social-icon:hover {
-  background-color: var(--accent-color);
-  transform: translateY(-3px);
-  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+@font-face {
+  font-family: "Avenir";
+  src: url(/css/AvenirLTStd-Black.otf);
+  font-weight: 900;
+  font-style: normal;
+  font-display: swap;
 }
-
-.social-icon:hover svg {
-  transform: scale(1.1);
+@font-face {
+  font-family: "Avenir";
+  src: url(/css/AvenirLTStd-BlackOblique.otf);
+  font-weight: 900;
+  font-style: oblique;
+  font-display: swap;
 }
-
-.social-icon:focus {
-  outline: none;
-  box-shadow: 0 0 0 3px rgba(var(--accent-rgb), 0.5);
+@font-face {
+  font-family: "Avenir";
+  src: url(/css/AvenirLTStd-Heavy.otf);
+  font-weight: 800;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Avenir";
+  src: url(/css/AvenirLTStd-HeavyOblique.otf);
+  font-weight: 800;
+  font-style: oblique;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Avenir";
+  src: url(/css/AvenirLTStd-Medium.otf);
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Avenir";
+  src: url(/css/AvenirLTStd-MediumOblique.otf);
+  font-weight: 500;
+  font-style: oblique;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Avenir";
+  src: url(/css/AvenirLTStd-Book.otf);
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Avenir";
+  src: url(/css/AvenirLTStd-BookOblique.otf);
+  font-weight: 400;
+  font-style: oblique;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Avenir";
+  src: url(/css/AvenirLTStd-Roman.otf);
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Avenir";
+  src: url(/css/AvenirLTStd-Oblique.otf);
+  font-weight: 400;
+  font-style: oblique;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Avenir";
+  src: url(/css/AvenirLTStd-Light.otf);
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Avenir";
+  src: url(/css/AvenirLTStd-LightOblique.otf);
+  font-weight: 300;
+  font-style: oblique;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Sacramento";
+  src: url(/css/Sacramento-Regular.ttf);
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
 }
