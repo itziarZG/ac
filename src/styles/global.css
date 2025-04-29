@@ -1,6 +1,20 @@
 @import "tailwindcss";
 @plugin "daisyui";
 
+/* Global transition styles */
+* {
+  transition: background-color 0.3s ease-in-out,
+              color 0.3s ease-in-out,
+              opacity 0.3s ease-in-out,
+              transform 0.3s ease-in-out;
+}
+
+/* View Transitions API for page navigation */
+::view-transition-old(root),
+::view-transition-new(root) {
+  animation-duration: 0.3s;
+}
+
 @theme {
   --color-green-AC: #60977b;
   --color-red-btn: rgb(255, 97, 97);
@@ -15,6 +29,7 @@
   --font-avenir: "Avenir", "sans-serif";
   --font-sacramento: "Sacramento", "sans-serif";
   --font-raleway: "Raleway", "sans-serif";
+  --font-cinzel: "Cinzel", "sans-serif";
 }
 @font-face {
   font-family: "Avenir";

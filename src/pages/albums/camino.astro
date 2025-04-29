@@ -1,0 +1,53 @@
+---
+import Layout from "../../layouts/Layout.astro";
+import Album from "../../components/Album.astro";
+
+const title = "Camino a Santa Clara | Ángela Cervantes";
+const description =
+  "Álbum 'Camino a Santa Clara' de Ángela Cervantes, un viaje al legado de la Vieja Trova Cubana junto a Los Fakires.";
+
+const albumData = {
+  title: "Camino a Santa Clara, por 50 años más con Los Fakires",
+  year: "202X",
+  coverImage:
+    "https://static.wixstatic.com/media/4b5c34_bd6f614c1f464fb4895b0e771eaa1cd5.jpg/v1/fill/w_280,h_274,al_c,q_80,usm_0.66_1.00_0.01,enc_avif,quality_auto/4b5c34_bd6f614c1f464fb4895b0e771eaa1cd5.jpg",
+  coverImageAlt: "Portada del álbum Camino a Santa Clara",
+  description:
+    'En éste segundo proyecto presentado bajo su nombre, Ángela Cervantes emprende viaje al centro de la isla de Cuba, un viaje en muchos sentidos; hacia el legado de los poetas de la Vieja Trova Cubana, también hacia el encuentro de Maestros representantes de la tradición musical cubana, quienes desde los últimos 50 años, vienen siendo fieles embajadores de esta hermosa música: Los Fakires. Una experiencia sublime junto a excelentes músicos, que llevan la Trova desde hace cinco décadas por escenarios de países como Japón, Inglaterra, Estados Unidos o España. La cantante ibicenca reúne a los veteranos Fakires, con jóvenes talentos también de la isla caribeña, como son: Maikel Elizarde, tresero a quien puede verse sobre los escenarios del cantautor Silvio Rodriguez; el contrabajista Gastón Joya, quien forma parte de las bandas de artistas como Omara Portuondo o Chucho Valdés y; Ariel Bringuez, saxofonista en los proyectos de Javier Colina y recientemente integrando la banda "Irakere 40", de Chucho Valdés… El proyecto cuenta también con invitados especiales como Danays Bautista o Gladston Galliza, entre otros…',
+  production: "",
+  collaborators: [
+    "Maikel Elizarde (tresero)",
+    "Gastón Joya (contrabajista)",
+    "Ariel Bringuez (saxofonista)",
+    "Danays Bautista (invitado)",
+    "Gladston Galliza (invitado)",
+  ],
+  highlightedSongs: [],
+  spotifyUrl: "spotify:album:1VFAQMLwqxWut01C2R6N3j",
+  quotes: [
+    {
+      text: "Se trata de un trabajo fresco, novedoso, tradicional y al mismo tiempo contemporáneo, respetando la raíz de su origen. Los arreglos, los solos y especialmente la vocalista Ángela Cervantes son maravillosos. Es una mirada Cubana al siglo XXI, por lo tanto recomiendo escuchar este material, que es el preludio de un nuevo camino.”",
+      author: "CHUCHO VALDÉS",
+    },
+    {
+      text: "Santa Clara ha sido siempre cuna de grandes músicos y de un movimiento cultural histórico. He tenido algunos de estos grandes músicos en Irakere como Enrique Plá, José Luis Cortés, Carlos Alvarez, Manuel Machado solo por mencionar algunos. Escuché por los años 70 un grupo llamado “Los Fakires” con el genial Pucho López, también la etapa de Juan José Bringuez y quedé sorprendido por la originalidad de estos músicos. Ahora Ariel Bringuez, su abuelo Juan José y la cantante Ángela Cervantes, han hecho un trabajo sorprendente.Después de escuchar este CD me he dado cuenta que la música Cubana está por muy buen camino.Se trata de un trabajo fresco, novedoso, tradicional y al mismo tiempo contemporáneo, respetando la raíz de su origen.Los arreglos, los solos y especialmente la vocalista Ángela Cervantes son maravillosos.Es una mirada Cubana al siglo XXI, por lo tanto recomiendo escuchar este material, que es el preludio de un nuevo camino.",
+      author: "CHUCHO VALDÉS",
+    },
+  ],
+  videos: [
+    {
+      title: "Ojos Malignos",
+      url: "https://www.youtube.com/watch?v=S9nc03ZhbiI",
+    },
+    {
+      title: "Soy tan feliz",
+      url: "https://www.youtube.com/watch?v=F_tsiiPgDM0&t",
+    },
+    { title: "", url: "https://www.youtube.com/watch?v=ZQABcNRJpNg" },
+  ],
+};
+---
+
+<Layout title={title} description={description} headerBg="bg-amber-300">
+  <Album {...albumData} />
+</Layout>

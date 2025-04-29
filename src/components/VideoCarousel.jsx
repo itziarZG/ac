@@ -25,7 +25,7 @@ const VideoCarousel = () => {
   ];
 
   return (
-    <section className="p-2 flex flex-col items-center">
+    <section className=" flex flex-col items-center">
       <h2 className="font-sacramento text-6xl tracking-wider">Videos</h2>
       <div className="carousel w-full">
         {videos.map((video) => (
