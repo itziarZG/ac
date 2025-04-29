@@ -1,5 +1,18 @@
 ---
 import "@styles/global.css";
+import Header from "@components/Header.astro";
+
+interface Props {
+  title?: string;
+  description?: string;
+  headerBg?: string;
+}
+
+const {
+  title = "Ángela Cervantes",
+  description = "Cantante de jazz y música latina",
+  headerBg = "bg-transparent",
+} = Astro.props;
 ---
 
 <!doctype html>
@@ -7,6 +20,7 @@ import "@styles/global.css";
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width" />
+    <meta name="view-transition" content="same-origin" />
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
 
     <title>Ángela Cervantes</title>
@@ -22,14 +36,15 @@ import "@styles/global.css";
       rel="stylesheet"
     />
   </head>
-  <body>
-    <main
-      class="bg-[url(/images/hero-bg-mobile.webp)] md:bg-[url(/images/hero-bg.webp)] bg-top bg-fixed text-white"
-    >
+  <body
+    class="bg-[url(/images/hero-bg-mobile.webp)] md:bg-[url(/images/hero-bg.webp)] bg-top bg-fixed text-white"
+  >
+    <Header bgColor={headerBg} />
+    <main>
       <slot />
     </main>
 
-    <footer class="bg-white text-sm text-gray-500">
+    <footer class="p-4 bg-transparent text-sm text-gray-500">
       <!-- <div class="footer-content">
         <div class="footer-social">
           <h3>Follow Me</h3>

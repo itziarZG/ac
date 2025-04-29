@@ -1,0 +1,151 @@
+---
+interface Props {
+  title: string;
+  year: string;
+  coverImage: string;
+  coverImageAlt: string;
+  description: string;
+  production: string;
+  collaborators: string[];
+  highlightedSongs: string[];
+  spotifyUrl?: string;
+  quotes?: {
+    text: string;
+    author: string;
+  }[];
+  videos?: {
+    title: string;
+    url: string;
+  }[];
+}
+
+const {
+  title,
+  year,
+  coverImage,
+  coverImageAlt,
+  description,
+  production,
+  collaborators,
+  highlightedSongs,
+  spotifyUrl,
+  quotes,
+  videos,
+} = Astro.props;
+---
+
+<section
+  class="-mt-1 p-4
+flex flex-col items-center gap-8 justify-center
+bg-amber-300 text-white
+w-full max-w-2xl mx-auto"
+>
+  <h1
+    class="font-cinzel uppercase text-2xl leading-tight tracking-normal text-center"
+  >
+    {title}
+  </h1>
+
+  <div class="w-full min-h-auto overflow-hidden rounded-lg shadow-lg">
+    <img
+      fetchpriority="high"
+      src={coverImage}
+      alt={coverImageAlt}
+      class="object-cover w-full h-full"
+    />
+  </div>
+
+  <div class="font-avenir font-light tracking-normal text-justify">
+    {
+      quotes && (
+        <div class="quotes mb-8 space-y-6">
+          {quotes.map((quote) => (
+            <blockquote class="italic border-l-4 border-gray-400 pl-4 mb-4">
+              <p>"{quote.text}"</p>
+              <cite class="block text-right font-light mt-2">
+                - {quote.author}
+              </cite>
+            </blockquote>
+          ))}
+        </div>
+      )
+    }
+
+    {
+      description && (
+        <div class="description mb-8">
+          <h2 class="font-bold mb-2">Descripción</h2>
+          <p class="font-light">{description}</p>
+        </div>
+      )
+    }
+
+    {
+      production && (
+        <div class="mb-8">
+          <h2 class="font-bold mb-2">Producción</h2>
+          <p class="font-light">{production}</p>
+        </div>
+      )
+    }
+
+    {
+      collaborators && (
+        <div class="mb-8">
+          <h2 class="font-bold mb-2">Colaboradores</h2>
+          <ul class="font-light list-disc list-inside">
+            {collaborators.map((collaborator) => (
+              <li>{collaborator}</li>
+            ))}
+          </ul>
+        </div>
+      )
+    }
+
+    {
+      highlightedSongs.length > 0 && (
+        <div class="mb-8">
+          <h2 class="font-bold mb-2">Temas Destacados</h2>
+          <ul class="font-light list-disc list-inside">
+            {highlightedSongs.map((song) => (
+              <li>"{song}"</li>
+            ))}
+          </ul>
+        </div>
+      )
+    }
+  </div>
+
+  {
+    spotifyUrl && (
+      <div class="w-full max-w-sm">
+        <iframe
+          src={`https://open.spotify.com/embed?uri=${spotifyUrl.split("/").pop()}`}
+          frameborder="0"
+          allowtransparency="true"
+          allow="encrypted-media"
+          class="w-full h-24 rounded-md"
+        />
+      </div>
+    )
+  }
+
+  {
+    videos && (
+      <div class="w-full space-y-8">
+        {videos.map((video) => (
+          <div class="relative w-full" style="padding-top: 56.25%;">
+            <iframe
+              src={video.url}
+              frameborder="0"
+              allowfullscreen=""
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+              title={video.title}
+              class="absolute top-0 left-0 w-full h-full rounded-md"
+            />
+          </div>
+        ))}
+      </div>
+    )
+  }
+</section>
