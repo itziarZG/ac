@@ -1,5 +1,6 @@
 ---
 import "./src/styles/global.css";
+import Navigation from "../components/Navigation";
 ---
 
 <!doctype html>
@@ -10,8 +11,7 @@ import "./src/styles/global.css";
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
 
     <title>Ángela Cervantes</title>
-    <link rel="stylesheet" href="/css/variables.css" />
-    <link rel="stylesheet" href="/css/styles.css" />
+
     <link
       href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Raleway:wght@300;400;500;600&display=swap"
       rel="stylesheet"
@@ -22,11 +22,11 @@ import "./src/styles/global.css";
       href="https://fonts.googleapis.com/css2?family=Sacramento&display=swap"
       rel="stylesheet"
     />
-    <script src="/js/main.js" defer></script>
   </head>
   <body>
+    <Navigation client:load />
     <main
-      class="bg-[url(/images/hero-bg-mobile.webp)] bg-top bg-fixed text-white"
+      class="bg-[url(/images/hero-bg-mobile.webp)] md:bg-[url(/images/hero-bg.webp)] bg-top bg-fixed text-white"
     >
       <slot />
     </main>
@@ -136,52 +136,5 @@ import "./src/styles/global.css";
       </p>
     </footer>
 
-    <script>
-      // Check if background image loaded successfully, otherwise apply gradient fallback
-      document.addEventListener("DOMContentLoaded", function () {
-        const bgDiv = document.querySelector(".bg-div");
-        if (bgDiv) {
-          // Determine which image to check based on screen width
-          let currentBreakpoint =
-            window.innerWidth <= 768 ? "mobile" : "desktop";
-          const imgSrc =
-            currentBreakpoint === "mobile"
-              ? "/images/hero-bg-mobile.jpg"
-              : "/images/hero-bg.jpg";
-
-          const img = new Image();
-          img.src = imgSrc;
-          img.onerror = function () {
-            bgDiv.classList.add("fail");
-          };
-
-          // Debounce function to limit how often resize handler fires
-          let resizeTimer: number | undefined;
-          const handleResize = function () {
-            clearTimeout(resizeTimer);
-            resizeTimer = setTimeout(function () {
-              const newBreakpoint =
-                window.innerWidth <= 768 ? "mobile" : "desktop";
-
-              // Only update if the breakpoint changed
-              if (newBreakpoint !== currentBreakpoint) {
-                currentBreakpoint = newBreakpoint;
-                const newImgSrc =
-                  currentBreakpoint === "mobile"
-                    ? "/images/hero-bg-mobile.jpg"
-                    : "/images/hero-bg.jpg";
-
-                // Use type assertion to fix TypeScript error
-                (bgDiv as HTMLElement).style.backgroundImage =
-                  `url('${newImgSrc}')`;
-              }
-            }, 150); // Wait 150ms after resize stops before updating
-          };
-
-          // Add resize listener
-          window.addEventListener("resize", handleResize);
-        }
-      });
-    </script>
   </body>
 </html>
