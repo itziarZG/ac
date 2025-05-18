@@ -26,7 +26,7 @@ const VideoCarousel = () => {
 
   return (
     <section className=" flex flex-col items-center">
-      <h2 className="font-sacramento text-6xl tracking-wider">Videos</h2>
+      <h2 className="font-rosaline text-6xl tracking-wider">Videos</h2>
       <div className="carousel w-full">
         {videos.map((video) => (
           <div key={video.id} id={video.id} className="carousel-item w-full">

@@ -24,7 +24,7 @@ const ConcertList = () => {
 
   return (
     <section className="p-2 flex flex-col items-center">
-      <h2 className="font-sacramento text-6xl tracking-wider">Conciertos</h2>
+      <h2 className="font-rosaline text-6xl tracking-wider">Conciertos</h2>
       <div className="grid grid-cols-1 sm:grid-cols-auto-fill minmax(280px, 1fr) gap-6 w-full max-w-4xl mt-6">
         {concerts.map((concert, index) => (
           <ConcertCard
