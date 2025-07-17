@@ -1,0 +1,28 @@
+---
+import "@styles/globals.css";
+import Header from "@components/Header.jsx";
+import Footer from "@components/Footer.jsx";
+---
+
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width" />
+    <meta name="view-transition" content="same-origin" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <title>Ángela Cervantes Web</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&family=Playfair+Display:wght@400;500;600;700;800;900&display=swap"
+      rel="stylesheet"
+    />
+    <script src="https://studio.pickaxe.co/api/embed/bundle.js" defer></script>
+  </head>
+  <body>
+    <Header client:load />
+    <main class="min-h-screen">
+      <slot />
+    </main>
+    <Footer client:load />
+  </body>
+</html>

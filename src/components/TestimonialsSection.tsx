@@ -1,41 +1,51 @@
-import React from 'react';
-import { Star, Quote } from 'lucide-react';
-import { Card, CardContent } from '@/components/ui/card';
+import React from "react";
+import { Star, Quote, Music } from "lucide-react";
+import { Card, CardContent } from "@/components/ui/card";
 
 const TestimonialsSection = () => {
   const testimonials = [
     {
       id: 1,
-      name: "María González",
-      role: "Crítica Musical - El País",
-      comment: "Ángela Cervantes posee una voz que trasciende el tiempo, conectando las tradiciones ancestrales con la sensibilidad contemporánea de manera excepcional.",
-      rating: 5,
-      image: "https://images.unsplash.com/photo-1494790108755-2616c6a92e64?w=150&h=150&fit=crop&crop=face"
+      name: "Chucho Valdés",
+      role: "sobre el álbum Camino a Santa Clara",
+      comment:
+        "Se trata de un trabajo fresco, novedoso, tradicional y al mismo tiempo contemporáneo, respetando la raíz de su origen. Los arreglos, los solos y especialmente la vocalista Ángela Cervantes son maravillosos.",
     },
     {
       id: 2,
-      name: "Carlos Ruiz",
-      role: "Director Artístico - Festival Flamenco",
-      comment: "Su interpretación de 'Palabras' fue simplemente conmovedora. Ángela tiene la capacidad única de hacer que cada canción cobre vida propia.",
-      rating: 5,
-      image: "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=150&h=150&fit=crop&crop=face"
+      name: "Antonio M. Beneyto. ",
+      role: "Diario El Mundo",
+      comment:
+        "El milagro de una buena voz, aparte de años de técnica y estudios, es aquella que con su personalidad te hace olvidar los problemas diarios con los que nos toca convivir, que te enamora, te duelen o te hace viajar.",
     },
     {
       id: 3,
-      name: "Isabel Martín",
-      role: "Musicóloga - Universidad Complutense",
-      comment: "El trabajo de investigación y preservación cultural que realiza Ángela es invaluable. Es una guardiana de nuestro patrimonio musical.",
-      rating: 5,
-      image: "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=150&h=150&fit=crop&crop=face"
+      name: "La Shica",
+      role: "Cantante y compositora",
+      comment:
+        "La primera vez que la vi cantar en directo, no pude cerrar la boca en todo el concierto... No entendía cómo alguien tan joven, podía tener todo eso dentro. Si cierras los ojos cuando ella está cantando, puedes sentir cómo las más grandes divas de la canción desfilan por su garganta...",
     },
     {
       id: 4,
-      name: "Antonio López",
-      role: "Productor Musical",
-      comment: "Trabajar con Ángela ha sido una experiencia enriquecedora. Su pasión por la música tradicional es contagiosa y su profesionalismo, excepcional.",
-      rating: 5,
-      image: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=150&h=150&fit=crop&crop=face"
-    }
+      name: "North West End Press",
+      role: "Press",
+      comment:
+        "Angela Cervantes, who takes on the indefinable role of Clare Torry in ‘Great Gig in the Sky’ is superb in her unearthly rendition",
+    },
+    {
+      id: 5,
+      name: "Mutxo por contar",
+      role: "México",
+      comment:
+        "... una de las piezas vocales más arduas de cantar en la escena rockera: “The great gig in the sky”, la cual fue ejecutada soberbiamente por Ángela Cervantes, con los míticos tonos de Clare Torry en el icónico álbum.",
+    },
+    {
+      id: 6,
+      name: "Blues Doodles",
+      role: "",
+      comment:
+        "The highlight of the evening for me though was Angela Cervantes rendition of ‘The Great Gig in The Sky’ it was an epic Floyd moment",
+    },
   ];
 
   return (
@@ -52,8 +62,17 @@ const TestimonialsSection = () => {
           </div>
 
           <div className="grid md:grid-cols-2 gap-8">
-            {testimonials.map((testimonial) => (
-              <Card key={testimonial.id} className="border-0 shadow-soft hover:shadow-warm transition-all duration-300 bg-background">
+            {testimonials.map((testimonial, idx) => (
+              <Card
+                key={testimonial.id}
+                className={`relative border-0 shadow-soft hover:shadow-warm transition-all duration-300 bg-white
+                  ${
+                    idx % 2 === 0
+                      ? "border-l-4 border-accent"
+                      : "border-r-4 border-warm-gold"
+                  }
+                `}
+              >
                 <CardContent className="p-8">
                   <div className="flex items-start gap-4 mb-6">
                     <Quote className="w-8 h-8 text-accent flex-shrink-0" />
@@ -61,13 +80,8 @@ const TestimonialsSection = () => {
                       "{testimonial.comment}"
                     </p>
                   </div>
-                  
+
                   <div className="flex items-center gap-4">
-                    <img 
-                      src={testimonial.image}
-                      alt={testimonial.name}
-                      className="w-12 h-12 rounded-full object-cover"
-                    />
                     <div className="flex-grow">
                       <h4 className="font-sans font-semibold text-primary">
                         {testimonial.name}
@@ -76,24 +90,12 @@ const TestimonialsSection = () => {
                         {testimonial.role}
                       </p>
                     </div>
-                    <div className="flex gap-1">
-                      {[...Array(testimonial.rating)].map((_, i) => (
-                        <Star key={i} className="w-4 h-4 fill-warm-gold text-warm-gold" />
-                      ))}
-                    </div>
                   </div>
+                  {/* Icono decorativo */}
+                  <Quote className="w-10 h-10 text-accent/10 absolute bottom-4 right-4 pointer-events-none" />
                 </CardContent>
               </Card>
             ))}
-          </div>
-
-          <div className="text-center mt-12">
-            <p className="font-sans text-muted-foreground mb-4">
-              ¿Has asistido a alguno de mis conciertos?
-            </p>
-            <button className="bg-accent text-accent-foreground px-6 py-3 rounded-lg font-sans font-medium hover:bg-accent/90 transition-colors">
-              Comparte tu experiencia
-            </button>
           </div>
         </div>
       </div>

@@ -1,6 +1,6 @@
-import React from 'react';
-import { Calendar, MapPin, Clock } from 'lucide-react';
-import { Card, CardContent } from '@/components/ui/card';
+import React from "react";
+import { Calendar, MapPin, Clock } from "lucide-react";
+import { Card, CardContent } from "@/components/ui/card";
 
 const CalendarSection = () => {
   const events = [
@@ -10,7 +10,6 @@ const CalendarSection = () => {
       title: "Concierto en Teatro Principal",
       location: "Valencia, España",
       time: "20:30",
-      status: "Próximo"
     },
     {
       id: 2,
@@ -18,7 +17,6 @@ const CalendarSection = () => {
       title: "Festival de Música Tradicional",
       location: "Sevilla, España",
       time: "19:00",
-      status: "Próximo"
     },
     {
       id: 3,
@@ -26,7 +24,6 @@ const CalendarSection = () => {
       title: "Recital Íntimo - 'Palabras'",
       location: "Madrid, España",
       time: "21:00",
-      status: "Entradas disponibles"
     },
     {
       id: 4,
@@ -34,8 +31,7 @@ const CalendarSection = () => {
       title: "Colaboración con Orquesta Sinfónica",
       location: "Barcelona, España",
       time: "20:00",
-      status: "Próximo"
-    }
+    },
   ];
 
   return (
@@ -47,25 +43,29 @@ const CalendarSection = () => {
               Calendario
             </h2>
             <p className="font-sans text-lg text-muted-foreground">
-              Próximas actuaciones y eventos donde podrás disfrutar de mi música en vivo
+              Próximas actuaciones y eventos donde podrás disfrutar de mi música
+              en vivo
             </p>
           </div>
 
           <div className="space-y-6">
             {events.map((event) => (
-              <Card key={event.id} className="overflow-hidden border border-border hover:shadow-soft transition-all duration-300">
-                <CardContent className="p-6">
+              <Card
+                key={event.id}
+                className="overflow-hidden border border-border hover:shadow-soft transition-all duration-300"
+              >
+                <CardContent className="p-4">
                   <div className="flex flex-col md:flex-row md:items-center gap-4">
                     <div className="flex-shrink-0">
-                      <div className="bg-accent text-accent-foreground p-4 rounded-lg text-center min-w-[100px]">
+                      <div className="bg-accent text-accent-foreground p-4 rounded-lg text-center min-w-[80px]">
                         <div className="font-sans text-sm font-medium">
-                          {event.date.split(' ')[0]}
+                          {event.date.split(" ")[0]}
                         </div>
                         <div className="font-display text-lg font-bold">
-                          {event.date.split(' ')[1]}
+                          {event.date.split(" ")[1]}
                         </div>
                         <div className="font-sans text-sm">
-                          {event.date.split(' ')[2]}
+                          {event.date.split(" ")[2]}
                         </div>
                       </div>
                     </div>
@@ -74,7 +74,7 @@ const CalendarSection = () => {
                       <h3 className="font-display text-xl font-semibold text-primary">
                         {event.title}
                       </h3>
-                      
+
                       <div className="flex flex-wrap gap-4 text-sm text-muted-foreground">
                         <div className="flex items-center gap-1">
                           <MapPin className="w-4 h-4" />
@@ -86,19 +86,13 @@ const CalendarSection = () => {
                         </div>
                       </div>
                     </div>
-
-                    <div className="flex-shrink-0">
-                      <span className="inline-block bg-warm-gold/20 text-primary px-3 py-1 rounded-full text-sm font-sans font-medium">
-                        {event.status}
-                      </span>
-                    </div>
                   </div>
                 </CardContent>
               </Card>
             ))}
           </div>
 
-          <div className="text-center mt-12">
+          {/* <div className="text-center mt-12">
             <p className="font-sans text-sm text-muted-foreground mb-4">
               ¿Quieres estar al día de todos mis conciertos?
             </p>
@@ -106,7 +100,7 @@ const CalendarSection = () => {
               <Calendar className="w-4 h-4 inline mr-2" />
               Suscríbete a mi calendario
             </button>
-          </div>
+          </div> */}
         </div>
       </div>
     </section>

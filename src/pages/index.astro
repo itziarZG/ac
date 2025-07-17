@@ -1,5 +1,5 @@
 ---
-import Header from "@components/Header.jsx";
+import Layout from "@/layouts/Layout.astro";
 import HeroSection from "@components/HeroSection.jsx";
 import AboutSection from "@components/AboutSection.jsx";
 import ProjectsSection from "@components/ProjectsSection.jsx";
@@ -7,20 +7,14 @@ import CalendarSection from "@components/CalendarSection.jsx";
 import TestimonialsSection from "@components/TestimonialsSection.jsx";
 import GallerySection from "@components/GallerySection.jsx";
 import ContactSection from "@components/ContactSection.jsx";
-import Footer from "@components/Footer.jsx";
-import "@styles/globals.css";
 ---
 
-<div class="min-h-screen">
-  <Header client:load />
-  <main>
-    <HeroSection client:load />
-    <AboutSection client:load />
-    <ProjectsSection client:load />
-    <CalendarSection client:load />
-    <TestimonialsSection client:load />
-    <GallerySection client:load />
-    <ContactSection client:load />
-  </main>
-  <Footer client:load />
-</div>
+<Layout>
+  <HeroSection client:load />
+  <AboutSection client:load />
+  <ProjectsSection client:load />
+  <CalendarSection client:load />
+  <TestimonialsSection client:load />
+  <GallerySection client:load />
+  <ContactSection client:load />
+</Layout>

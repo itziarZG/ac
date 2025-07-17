@@ -1,6 +1,6 @@
-import React from 'react';
-import { Mail, Phone, MapPin, User } from 'lucide-react';
-import { Card, CardContent } from '@/components/ui/card';
+import React from "react";
+import { Mail, Phone, MapPin, User, Globe } from "lucide-react";
+import { Card, CardContent } from "@/components/ui/card";
 
 const ContactSection = () => {
   return (
@@ -16,13 +16,17 @@ const ContactSection = () => {
             </p>
           </div>
 
-          <div className="grid md:grid-cols-2 gap-8 items-start">
+          <div className="flex justify-center items-center">
             <Card className="border-0 shadow-soft bg-background">
               <CardContent className="p-8">
                 <div className="space-y-6">
                   <div className="text-center mb-8">
-                    <div className="w-20 h-20 bg-gradient-sunset rounded-full flex items-center justify-center mx-auto mb-4">
-                      <User className="w-8 h-8 text-primary-foreground" />
+                    <div className=" bg-gradient-sunset rounded-full flex items-center justify-center mx-auto mb-4">
+                      <img
+                        src="/images/espacioC.webp"
+                        alt="Logo Espacio C"
+                        className="object-contain w-full h-full"
+                      />
                     </div>
                     <h3 className="font-display text-xl font-semibold text-primary mb-2">
                       Rocío Royo Durán
@@ -39,8 +43,13 @@ const ContactSection = () => {
                     <div className="flex items-center gap-4 p-4 bg-soft-cream rounded-lg">
                       <Phone className="w-5 h-5 text-accent flex-shrink-0" />
                       <div>
-                        <p className="font-sans font-medium text-primary">Teléfono</p>
-                        <a href="tel:+34678007121" className="font-sans text-foreground hover:text-accent transition-colors">
+                        <p className="font-sans font-medium text-primary">
+                          Teléfono
+                        </p>
+                        <a
+                          href="tel:+34678007121"
+                          className="font-sans text-foreground hover:text-accent transition-colors"
+                        >
                           +34 678 007 121
                         </a>
                       </div>
@@ -49,74 +58,37 @@ const ContactSection = () => {
                     <div className="flex items-center gap-4 p-4 bg-soft-cream rounded-lg">
                       <Mail className="w-5 h-5 text-accent flex-shrink-0" />
                       <div>
-                        <p className="font-sans font-medium text-primary">Email</p>
-                        <a href="mailto:contacto@angelacervantes.es" className="font-sans text-foreground hover:text-accent transition-colors">
-                          contacto@angelacervantes.es
+                        <p className="font-sans font-medium text-primary">
+                          Email
+                        </p>
+                        <a
+                          href="mailto:hola@espacioc.es"
+                          className="font-sans text-foreground hover:text-accent transition-colors"
+                        >
+                          hola@espacioc.es
                         </a>
                       </div>
                     </div>
-
                     <div className="flex items-center gap-4 p-4 bg-soft-cream rounded-lg">
-                      <MapPin className="w-5 h-5 text-accent flex-shrink-0" />
+                      <Globe className="w-5 h-5 text-accent flex-shrink-0" />
                       <div>
-                        <p className="font-sans font-medium text-primary">Ubicación</p>
-                        <p className="font-sans text-foreground">España</p>
+                        <p className="font-sans font-medium text-primary">
+                          Manager / Gestión
+                        </p>
+                        <a
+                          href="https://www.espacioc.es/artists"
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="font-sans text-foreground hover:text-accent transition-colors underline"
+                        >
+                          www.espacioc.es/artists
+                        </a>
                       </div>
                     </div>
                   </div>
                 </div>
               </CardContent>
             </Card>
-
-            <div className="space-y-8">
-              <div className="bg-background p-8 rounded-xl shadow-soft">
-                <h3 className="font-display text-xl font-semibold text-primary mb-4">
-                  Tipos de eventos
-                </h3>
-                <ul className="space-y-3 font-sans text-foreground">
-                  <li className="flex items-center gap-2">
-                    <div className="w-2 h-2 bg-accent rounded-full"></div>
-                    Conciertos en teatros y auditorios
-                  </li>
-                  <li className="flex items-center gap-2">
-                    <div className="w-2 h-2 bg-accent rounded-full"></div>
-                    Festivales de música tradicional
-                  </li>
-                  <li className="flex items-center gap-2">
-                    <div className="w-2 h-2 bg-accent rounded-full"></div>
-                    Eventos culturales y celebraciones
-                  </li>
-                  <li className="flex items-center gap-2">
-                    <div className="w-2 h-2 bg-accent rounded-full"></div>
-                    Talleres y masterclasses
-                  </li>
-                  <li className="flex items-center gap-2">
-                    <div className="w-2 h-2 bg-accent rounded-full"></div>
-                    Colaboraciones artísticas
-                  </li>
-                </ul>
-              </div>
-
-              <div className="bg-background p-8 rounded-xl shadow-soft">
-                <h3 className="font-display text-xl font-semibold text-primary mb-4">
-                  Disponibilidad
-                </h3>
-                <p className="font-sans text-foreground mb-4">
-                  Actualmente disponible para actuaciones en toda España y Europa. 
-                  Para fechas específicas y presupuestos, contacta con mi equipo de management.
-                </p>
-                <div className="grid grid-cols-2 gap-4 text-center">
-                  <div className="p-3 bg-soft-cream rounded-lg">
-                    <div className="font-display font-semibold text-accent">Nacional</div>
-                    <div className="font-sans text-sm text-muted-foreground">España</div>
-                  </div>
-                  <div className="p-3 bg-soft-cream rounded-lg">
-                    <div className="font-display font-semibold text-accent">Internacional</div>
-                    <div className="font-sans text-sm text-muted-foreground">Europa</div>
-                  </div>
-                </div>
-              </div>
-            </div>
           </div>
         </div>
       </div>
