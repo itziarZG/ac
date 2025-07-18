@@ -3,6 +3,8 @@ import { Mail, Phone, MapPin, User, Globe } from "lucide-react";
 import { Card, CardContent } from "@/components/ui/card";
 
 const ContactSection = () => {
+  const espacioCWeb =
+    "https://espacioc.es/so/bePRioX4h?languageTag=es&status=Draft&cid=00000000-0000-0000-0000-000000000000";
   return (
     <section id="contacto" className="py-20 bg-soft-cream">
       <div className="container mx-auto px-4">
@@ -82,6 +84,23 @@ const ContactSection = () => {
                           className="font-sans text-foreground hover:text-accent transition-colors underline"
                         >
                           www.espacioc.es/artists
+                        </a>
+                      </div>
+                    </div>
+                    {/* Sección de web usando la variable espacioCWeb */}
+                    <div className="flex items-center gap-4 p-4 bg-soft-cream rounded-lg">
+                      <Globe className="w-5 h-5 text-accent flex-shrink-0" />
+                      <div>
+                        <p className="font-sans font-medium text-primary">
+                          Web
+                        </p>
+                        <a
+                          href={espacioCWeb}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="font-sans text-foreground hover:text-accent transition-colors underline"
+                        >
+                          Vísitanos
                         </a>
                       </div>
                     </div>
