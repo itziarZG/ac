@@ -14,6 +14,7 @@ const ProjectsSection = () => {
       pressKit:
         "https://www.espacioc.es/_files/ugd/46812f_b9264cedd45347a6a1e86e78da63f8b6.pdf",
       hasLink: true,
+      hover: "Un repertorio mestizo que nace de la memoria y el alma",
     },
     {
       id: 2,
@@ -80,6 +81,12 @@ const ProjectsSection = () => {
                 className="group overflow-hidden border-0 shadow-soft hover:shadow-warm transition-all duration-300"
               >
                 <div className="relative aspect-square overflow-hidden">
+                  {/* Titular hover, si existe */}
+                  {project.hover && (
+                    <div className="absolute top-0 left-0 w-full z-10 bg-primary/80 text-primary-foreground font-display text-lg px-4 py-2 rounded-b-xl shadow-md">
+                      {project.hover}
+                    </div>
+                  )}
                   <img
                     src={project.image}
                     alt={project.title}

@@ -1,6 +1,34 @@
-import React from "react";
-
+import React, { useEffect, useState } from "react";
+const frasesCarrusel = [
+  "Una voz mestiza que viaja entre orillas.",
+  "Canta desde la entraña. Compromiso, belleza y verdad.",
+  "Del Mediterráneo al mundo: jazz, raíz y emoción.",
+  "Canciones que unen lo ancestral y lo contemporáneo.",
+  "Una artista con alma libre y raíz profunda.",
+];
 const HeroSection = () => {
+  const [fraseIdx, setFraseIdx] = useState(0);
+  const [fade, setFade] = useState(true);
+
+  useEffect(() => {
+    const timeout = setTimeout(() => setFade(false), 3000); // Empieza fade-out antes de cambiar
+    const interval = setInterval(() => {
+      setFade(false); // Empieza fade-out
+      setTimeout(() => {
+        setFraseIdx((prev) => (prev + 1) % frasesCarrusel.length);
+        setFade(true); // Fade-in de la nueva frase
+      }, 500); // Duración del fade-out
+    }, 3500);
+    return () => {
+      clearTimeout(timeout);
+      clearInterval(interval);
+    };
+  }, []);
+
+  useEffect(() => {
+    setFade(true); // Asegura fade-in al montar/cambiar frase
+  }, [fraseIdx]);
+
   return (
     <section
       id="inicio"
@@ -12,9 +40,12 @@ const HeroSection = () => {
             Ángela Cervantes
           </h1>
 
-          <p className="font-sans text-xl md:text-2xl text-muted-foreground mb-12 max-w-2xl mx-auto leading-relaxed">
-            Música tradicional española que conecta corazones y preserva nuestra
-            herencia cultural
+          <p
+            className={`font-display text-2xl md:text-3xl text-accent mb-6 min-h-[2.5em] transition-opacity duration-500 ease-in-out ${
+              fade ? "opacity-100" : "opacity-0"
+            }`}
+          >
+            {frasesCarrusel[fraseIdx]}
           </p>
 
           <div className="relative max-w-md mx-auto mb-12">
