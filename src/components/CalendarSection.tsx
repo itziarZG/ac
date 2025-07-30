@@ -1,38 +1,36 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import { Calendar, MapPin, Clock } from "lucide-react";
 import { Card, CardContent } from "@/components/ui/card";
 
+const CALENDAR_ID = "managementangelacervantes@gmail.com";
+const API_KEY = "PON_AQUI_TU_API_KEY"; // <-- Reemplaza esto por tu API Key
+
 const CalendarSection = () => {
-  const events = [
-    {
-      id: 1,
-      date: "15 FEB 2024",
-      title: "Concierto en Teatro Principal",
-      location: "Valencia, España",
-      time: "20:30",
-    },
-    {
-      id: 2,
-      date: "22 FEB 2024",
-      title: "Festival de Música Tradicional",
-      location: "Sevilla, España",
-      time: "19:00",
-    },
-    {
-      id: 3,
-      date: "08 MAR 2024",
-      title: "Recital Íntimo - 'Palabras'",
-      location: "Madrid, España",
-      time: "21:00",
-    },
-    {
-      id: 4,
-      date: "20 MAR 2024",
-      title: "Colaboración con Orquesta Sinfónica",
-      location: "Barcelona, España",
-      time: "20:00",
-    },
-  ];
+  const [events, setEvents] = useState<any[]>([]);
+  const [loading, setLoading] = useState(true);
+  const [error, setError] = useState<string | null>(null);
+
+  useEffect(() => {
+    const fetchEvents = async () => {
+      setLoading(true);
+      setError(null);
+      try {
+        const now = new Date().toISOString();
+        const url = `https://www.googleapis.com/calendar/v3/calendars/${encodeURIComponent(
+          CALENDAR_ID
+        )}/events?key=${API_KEY}&singleEvents=true&orderBy=startTime&timeMin=${now}`;
+        const res = await fetch(url);
+        if (!res.ok) throw new Error("No se pudo obtener el calendario");
+        const data = await res.json();
+        setEvents(data.items || []);
+      } catch (err: any) {
+        setError(err.message || "Error desconocido");
+      } finally {
+        setLoading(false);
+      }
+    };
+    fetchEvents();
+  }, []);
 
   return (
     <section id="calendario" className="py-20 bg-background">
@@ -47,60 +45,81 @@ const CalendarSection = () => {
               en vivo
             </p>
           </div>
-
+          {loading && <p className="text-center">Cargando eventos...</p>}
+          {error && <p className="text-center text-red-500">{error}</p>}
           <div className="space-y-6">
-            {events.map((event) => (
-              <Card
-                key={event.id}
-                className="overflow-hidden border border-border hover:shadow-soft transition-all duration-300"
-              >
-                <CardContent className="p-4">
-                  <div className="flex flex-col md:flex-row md:items-center gap-4">
-                    <div className="flex-shrink-0">
-                      <div className="bg-accent text-accent-foreground p-4 rounded-lg text-center min-w-[80px]">
-                        <div className="font-sans text-sm font-medium">
-                          {event.date.split(" ")[0]}
+            {events.map((event) => {
+              const start = event.start?.dateTime || event.start?.date;
+              const dateObj = start ? new Date(start) : null;
+              return (
+                <Card
+                  key={event.id}
+                  className="overflow-hidden border border-border hover:shadow-soft transition-all duration-300"
+                >
+                  <CardContent className="p-4">
+                    <div className="flex flex-col md:flex-row md:items-center gap-4">
+                      <div className="flex-shrink-0">
+                        <div className="bg-accent text-accent-foreground p-4 rounded-lg text-center min-w-[80px]">
+                          <div className="font-sans text-sm font-medium">
+                            {dateObj
+                              ? dateObj.toLocaleDateString("es-ES", {
+                                  day: "2-digit",
+                                })
+                              : ""}
+                          </div>
+                          <div className="font-display text-lg font-bold">
+                            {dateObj
+                              ? dateObj
+                                  .toLocaleDateString("es-ES", {
+                                    month: "short",
+                                  })
+                                  .toUpperCase()
+                              : ""}
+                          </div>
+                          <div className="font-sans text-sm">
+                            {dateObj
+                              ? dateObj.toLocaleDateString("es-ES", {
+                                  year: "numeric",
+                                })
+                              : ""}
+                          </div>
                         </div>
-                        <div className="font-display text-lg font-bold">
-                          {event.date.split(" ")[1]}
-                        </div>
-                        <div className="font-sans text-sm">
-                          {event.date.split(" ")[2]}
+                      </div>
+                      <div className="flex-grow space-y-2">
+                        <h3 className="font-display text-xl font-semibold text-primary">
+                          {event.summary}
+                        </h3>
+                        <div className="flex flex-wrap gap-4 text-sm text-muted-foreground">
+                          <div className="flex items-center gap-1">
+                            <MapPin className="w-4 h-4" />
+                            <span className="font-sans">
+                              {event.location || "Por anunciar"}
+                            </span>
+                          </div>
+                          <div className="flex items-center gap-1">
+                            <Clock className="w-4 h-4" />
+                            <span className="font-sans">
+                              {dateObj && event.start?.dateTime
+                                ? dateObj.toLocaleTimeString("es-ES", {
+                                    hour: "2-digit",
+                                    minute: "2-digit",
+                                  })
+                                : ""}
+                            </span>
+                          </div>
                         </div>
                       </div>
                     </div>
-
-                    <div className="flex-grow space-y-2">
-                      <h3 className="font-display text-xl font-semibold text-primary">
-                        {event.title}
-                      </h3>
-
-                      <div className="flex flex-wrap gap-4 text-sm text-muted-foreground">
-                        <div className="flex items-center gap-1">
-                          <MapPin className="w-4 h-4" />
-                          <span className="font-sans">{event.location}</span>
-                        </div>
-                        <div className="flex items-center gap-1">
-                          <Clock className="w-4 h-4" />
-                          <span className="font-sans">{event.time}</span>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </CardContent>
-              </Card>
-            ))}
+                  </CardContent>
+                </Card>
+              );
+            })}
+            {!loading && !error && events.length === 0 && (
+              <p className="text-center text-muted-foreground">
+                No hay eventos próximos.
+              </p>
+            )}
           </div>
-
-          {/* <div className="text-center mt-12">
-            <p className="font-sans text-sm text-muted-foreground mb-4">
-              ¿Quieres estar al día de todos mis conciertos?
-            </p>
-            <button className="bg-accent text-accent-foreground px-6 py-3 rounded-lg font-sans font-medium hover:bg-accent/90 transition-colors">
-              <Calendar className="w-4 h-4 inline mr-2" />
-              Suscríbete a mi calendario
-            </button>
-          </div> */}
         </div>
       </div>
     </section>
