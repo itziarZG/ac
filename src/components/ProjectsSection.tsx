@@ -6,19 +6,20 @@ const ProjectsSection = () => {
   const projects = [
     {
       id: 1,
-      title: "Atemporal",
+      title: "A T E M P O R A L",
       description:
-        "Su nuevo proyecto, un rito sonoro en siete idiomas, que entrelaza la poesía mística, la canción popular, el jazz y la raíz mediterránea. Junto a una banda de músicos excepcionales (Ariel Brínguez, Chema Saiz, Pablo Martín Caminero y Andrés Litwin), ofrece una travesía emocional sin fronteras ni relojes, donde cantar se convierte en forma de resistencia, conexión y belleza compartida.",
+        "Un rito sonoro que trasciende fronteras, lenguas y siglos.Conectando la poesía mística de Rumi con el canto tradicional, desde las dunas árabes hasta las cumbres sefardies, pasando por los ecos flamencos y el belcanto europeo.El Mediterráneo como cuna, la diáspora como latido, y la mezcla como identidad.Un canto colectivo que bebe de la tradición oral, revive el legado femenino y lo actualiza sin nostalgia.De Rumi a Serrat, de Fayruz a Drexler, de Noa a Valderrama...\n La voz de Ángela Cervantes se entrelaza con una banda de músicos excepcionales:*Ariel Bringuez (saxofón soprano y zaphoon y arreglos) Chema Sáiz guitarra y pedales electrónicos) Pablo Martín Caminero (contrabajo) Andrés Litwin (batería híbrida y percusión) \n El folclore se entrelaza con la creación espontánea, lo étnico con lo electrónico, lo íntimo con lo colectivo.",
       image: "images/atemporal.jpg",
       year: "2025",
       pressKit:
         "https://www.espacioc.es/_files/ugd/46812f_b9264cedd45347a6a1e86e78da63f8b6.pdf",
       hasLink: true,
-      hover: "Un repertorio mestizo que nace de la memoria y el alma",
+      hover:
+        "Un repertorio mestizo que nace de mi búsqueda personal y fascinación por el encuentro con la esencia del alma a través de la voz",
     },
     {
       id: 2,
-      title: "Àngela Cervantes - en esta orilla de Drexler",
+      title: "En Esta Orilla de Drexler",
       description:
         "Su primer álbum en solitario, que contó con Jorge Drexler y supuso un antes y un después en su obra, y que ahora se readapta para dar origen a Drexleriana.",
       image: "images/drexler.webp",
@@ -41,7 +42,7 @@ const ProjectsSection = () => {
       id: 4,
       title: "Recordando a Ella Fitzgerald & Joe Pass",
       description:
-        "Un álbum grabado a dúo con Chema Saiz que rinde homenaje a los grandes del jazz, explorando el repertorio clásico con una perspectiva contemporánea.",
+        "Un álbum grabado a dúo con Chema Saiz que rinde homenaje a estos dos titanes del jazz, explorando el repertorio clásico con una perspectiva contemporánea.",
       image: "images/fitgeral.webp",
       year: "2014",
       pressKit: null,
@@ -52,7 +53,7 @@ const ProjectsSection = () => {
       id: 5,
       title: "Olas y Arenas",
       description:
-        "Su más reciente trabajo discográfico, dedicado a la compositora puertorriqueña Sylvia Rexach, realizado junto al pianista cubano Pepe Rivero. Un álbum que marca una nueva etapa artística y una declaración de madurez creativa.",
+        "Su más reciente trabajo discográfico, de la mano del pianista cubano Pepe Rivero, quien además es el arreglista, honrando ambos la memoria y la obra de la compositora puertorriqueña Sylvia Rexach. Un álbum que marca una nueva etapa artística para Ángela y una declaración de madurez creativa junto a Rivero.",
       image: "/images/olasarenas.webp",
       year: "2024",
       pressKit: "#",
@@ -70,7 +71,7 @@ const ProjectsSection = () => {
             </h2>
             <p className="font-sans text-lg text-muted-foreground max-w-2xl mx-auto">
               Una colección de trabajos que reflejan mi compromiso con la música
-              tradicional española
+              de raíz.
             </p>
           </div>
 

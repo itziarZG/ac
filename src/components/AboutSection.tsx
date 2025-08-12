@@ -2,7 +2,7 @@ import React from "react";
 const titulares = [
   "Cuatro discos, mil paisajes sonoros y un solo pulso: el de la emoción.",
   "Escenarios de todo el mundo, géneros que dialogan.",
-  "Del Radio City al corazón del Mediterráneo.",
+  "De su isla natal al continente americano, para regresar a las músicas del Mediterráneo y a la música de su propio vientre.",
   "Una artista con alma libre y raíz profunda.",
 ];
 const AboutSection = () => {

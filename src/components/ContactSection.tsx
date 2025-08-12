@@ -1,5 +1,5 @@
 import React from "react";
-import { Mail, Phone, MapPin, User, Globe } from "lucide-react";
+import { Mail, Phone, Globe } from "lucide-react";
 import { Card, CardContent } from "@/components/ui/card";
 
 const ContactSection = () => {
@@ -11,7 +11,7 @@ const ContactSection = () => {
         <div className="max-w-4xl mx-auto">
           <div className="text-center mb-16">
             <h2 className="font-display text-4xl md:text-5xl font-bold text-primary mb-6">
-              Contacto
+              Contratación y management
             </h2>
             <p className="font-sans text-lg text-muted-foreground">
               Para contrataciones, colaboraciones y consultas profesionales

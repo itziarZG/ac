@@ -9,8 +9,7 @@ const CalendarSection = () => (
             Calendario
           </h2>
           <p className="font-sans text-lg text-muted-foreground">
-            Próximas actuaciones y eventos donde podrás disfrutar de mi música
-            en vivo
+            Próximas actuaciones y eventos en directo
           </p>
         </div>
         <div className="flex justify-center">

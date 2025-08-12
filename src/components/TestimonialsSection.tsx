@@ -53,11 +53,12 @@ const TestimonialsSection = () => {
       <div className="container mx-auto px-4">
         <div className="max-w-6xl mx-auto">
           <div className="text-center mb-16">
-            <h2 className="font-display text-4xl md:text-5xl font-bold text-primary mb-6">
-              Comentarios
+            <h2 className="font-display text-4xl md:text-5xl font-bold text-primary mb-6 uppercase">
+              Impresiones
             </h2>
             <p className="font-sans text-lg text-muted-foreground">
-              Lo que dicen los profesionales y amantes de la música tradicional
+              Lo que dicen algunos medios de prensa internacional y
+              profesionales de la música.
             </p>
           </div>
 
