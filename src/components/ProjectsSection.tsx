@@ -9,7 +9,7 @@ const ProjectsSection = () => {
       title: "A T E M P O R A L",
       description:
         "Un rito sonoro que trasciende fronteras, lenguas y siglos.Conectando la poesía mística de Rumi con el canto tradicional, desde las dunas árabes hasta las cumbres sefardies, pasando por los ecos flamencos y el belcanto europeo.El Mediterráneo como cuna, la diáspora como latido, y la mezcla como identidad.Un canto colectivo que bebe de la tradición oral, revive el legado femenino y lo actualiza sin nostalgia.De Rumi a Serrat, de Fayruz a Drexler, de Noa a Valderrama...\n La voz de Ángela Cervantes se entrelaza con una banda de músicos excepcionales:*Ariel Bringuez (saxofón soprano y zaphoon y arreglos) Chema Sáiz guitarra y pedales electrónicos) Pablo Martín Caminero (contrabajo) Andrés Litwin (batería híbrida y percusión) \n El folclore se entrelaza con la creación espontánea, lo étnico con lo electrónico, lo íntimo con lo colectivo.",
-      image: "images/atemporal.jpg",
+      image: "images/atemporal.webp",
       year: "2025",
       pressKit:
         "https://www.espacioc.es/_files/ugd/46812f_b9264cedd45347a6a1e86e78da63f8b6.pdf",
