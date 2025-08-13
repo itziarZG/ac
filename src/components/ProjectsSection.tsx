@@ -16,6 +16,7 @@ const ProjectsSection = () => {
       hasLink: true,
       hover:
         "Un repertorio mestizo que nace de mi búsqueda personal y fascinación por el encuentro con la esencia del alma a través de la voz",
+      featured: true,
     },
     {
       id: 2,
@@ -61,6 +62,9 @@ const ProjectsSection = () => {
     },
   ];
 
+  const featuredProject = projects.find((p) => p.featured);
+  const regularProjects = projects.filter((p) => !p.featured);
+
   return (
     <section id="proyectos" className="py-20 bg-soft-cream">
       <div className="container mx-auto px-4">
@@ -75,8 +79,61 @@ const ProjectsSection = () => {
             </p>
           </div>
 
+          {/* Proyecto Destacado */}
+          {featuredProject && (
+            <div className="mb-16">
+              <Card className="group overflow-hidden border-0 shadow-soft hover:shadow-warm transition-all duration-300 bg-gradient-to-br from-primary/5 to-accent/5">
+                <div className="grid md:grid-cols-2 gap-0">
+                  <div className="relative aspect-square md:aspect-auto md:h-auto overflow-hidden">
+                    {/* Titular hover, si existe */}
+                    {featuredProject.hover && (
+                      <div className="absolute bottom-0 left-0 w-full z-10 bg-primary/80 text-primary-foreground font-display text-sm md:text-lg px-4 py-2 rounded-b-xl shadow-md">
+                        {featuredProject.hover}
+                      </div>
+                    )}
+                    <img
+                      src={featuredProject.image}
+                      alt={featuredProject.title}
+                      className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
+                    />
+                    <div className="absolute inset-0 bg-gradient-to-t from-primary/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+                    <div className="absolute bottom-4 left-4 right-4 transform translate-y-4 group-hover:translate-y-0 opacity-0 group-hover:opacity-100 transition-all duration-300">
+                      <div className="flex items-center gap-2 flex-wrap">
+                        {featuredProject.hasLink && (
+                          <button className="flex items-center gap-2 bg-primary-foreground text-primary px-3 py-1 rounded-full text-sm font-medium">
+                            <ExternalLink className="w-4 h-4" />
+                            Press Kit
+                          </button>
+                        )}
+                        <button className="flex items-center gap-2 bg-accent text-accent-foreground px-3 py-1 rounded-full text-sm font-medium">
+                          <Play className="w-4 h-4" />
+                          Escuchar
+                        </button>
+                      </div>
+                    </div>
+                  </div>
+
+                  <CardContent className="p-6 md:p-8 flex flex-col justify-center">
+                    <div className="flex items-center justify-between mb-4">
+                      <h3 className="font-display text-xl md:text-2xl lg:text-3xl font-semibold text-primary">
+                        {featuredProject.title}
+                      </h3>
+                      <span className="font-sans text-sm text-muted-foreground bg-muted px-3 py-1 rounded-full">
+                        {featuredProject.year}
+                      </span>
+                    </div>
+                    <p className="font-sans text-foreground leading-relaxed text-base md:text-lg">
+                      {featuredProject.description}
+                    </p>
+                  </CardContent>
+                </div>
+              </Card>
+            </div>
+          )}
+
+          {/* Resto de Proyectos */}
           <div className="grid md:grid-cols-2 gap-8">
-            {projects.map((project) => (
+            {regularProjects.map((project) => (
               <Card
                 key={project.id}
                 className="group overflow-hidden border-0 shadow-soft hover:shadow-warm transition-all duration-300"
