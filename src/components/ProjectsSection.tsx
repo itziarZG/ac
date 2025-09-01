@@ -8,7 +8,7 @@ const ProjectsSection = () => {
       id: 1,
       title: "A T E M P O R A L",
       description:
-        "Un rito sonoro que trasciende fronteras, lenguas y siglos.Conectando la poesía mística de Rumi con el canto tradicional, desde las dunas árabes hasta las cumbres sefardies, pasando por los ecos flamencos y el belcanto europeo.El Mediterráneo como cuna, la diáspora como latido, y la mezcla como identidad.Un canto colectivo que bebe de la tradición oral, revive el legado femenino y lo actualiza sin nostalgia.De Rumi a Serrat, de Fayruz a Drexler, de Noa a Valderrama...\n La voz de Ángela Cervantes se entrelaza con una banda de músicos excepcionales:*Ariel Bringuez (saxofón soprano y zaphoon y arreglos) Chema Sáiz guitarra y pedales electrónicos) Pablo Martín Caminero (contrabajo) Andrés Litwin (batería híbrida y percusión) \n El folclore se entrelaza con la creación espontánea, lo étnico con lo electrónico, lo íntimo con lo colectivo.",
+        "Un rito sonoro que trasciende fronteras, lenguas y siglos. Conectando la poesía mística de Rumi con el canto tradicional, desde las dunas árabes hasta las cumbres sefardies, pasando por los ecos flamencos y el belcanto europeo. El Mediterráneo como cuna, la diáspora como latido, y la mezcla como identidad. Un canto colectivo que bebe de la tradición oral, revive el legado femenino y lo actualiza sin nostalgia. De Rumi a Drexler, de Fayruz a Carmen París, de Noa a Valderrama...\n La voz de Ángela Cervantes se entrelaza con una banda de músicos excepcionales: Ariel Bringuez (saxofón soprano y zaphoon y arreglos), Chema Sáiz guitarra y pedales electrónicos), Pablo Martín Caminero (contrabajo), Andrés Litwin (batería híbrida y percusión). \n El folclore se entrelaza con la creación espontánea, lo étnico con lo electrónico, lo íntimo con lo colectivo.",
       image: "images/atemporal.webp",
       year: "2025",
       pressKit:
@@ -22,7 +22,7 @@ const ProjectsSection = () => {
       id: 2,
       title: "En Esta Orilla de Drexler",
       description:
-        "Su primer álbum en solitario, que contó con Jorge Drexler y supuso un antes y un después en su obra, y que ahora se readapta para dar origen a Drexleriana.",
+        "Su primer álbum en solitario, que contó con la complicidad de Jorge Drexler y supuso un antes y un después en su carrera profesional, siendo su debut discográfico, se reimagina ahora para dar origen a Drexleriana. Este proyecto renace en formato de quinteto y sale de gira acompañado por la voz y la guitarra de Gladston Galliza como artista invitado, abriendo un nuevo capítulo sonoro que dialoga con aquel inicio y lo expande hacia el presente.",
       image: "images/drexler.webp",
       year: "2012",
       pressKit: "#",
@@ -54,7 +54,7 @@ const ProjectsSection = () => {
       id: 5,
       title: "Olas y Arenas",
       description:
-        "Su más reciente trabajo discográfico, de la mano del pianista cubano Pepe Rivero, quien además es el arreglista, honrando ambos la memoria y la obra de la compositora puertorriqueña Sylvia Rexach. Un álbum que marca una nueva etapa artística para Ángela y una declaración de madurez creativa junto a Rivero.",
+        "Su primer álbum en solitario, que contó con la complicidad de Jorge Drexler y supuso un antes y un después en su carrera profesional, siendo su debut discográfico, se reimagina ahora para dar origen a Drexleriana. Este proyecto renace en formato de quinteto y sale de gira acompañado por la voz y la guitarra de Gladston Galliza como artista invitado, abriendo un nuevo capítulo sonoro que dialoga con aquel inicio y lo expande hacia el presente.",
       image: "/images/olasarenas.webp",
       year: "2024",
       pressKit: "#",
@@ -87,7 +87,7 @@ const ProjectsSection = () => {
                   <div className="relative aspect-square md:aspect-auto md:h-auto overflow-hidden">
                     {/* Titular hover, si existe */}
                     {featuredProject.hover && (
-                      <div className="absolute bottom-0 left-0 w-full z-10 bg-primary/80 text-primary-foreground font-display text-sm md:text-lg px-4 py-2 rounded-b-xl shadow-md">
+                      <div className="absolute bottomgit l-0 left-0 w-full z-10 bg-primary/80 text-primary-foreground font-display text-sm md:text-lg px-4 py-2 rounded-b-xl shadow-md">
                         {featuredProject.hover}
                       </div>
                     )}

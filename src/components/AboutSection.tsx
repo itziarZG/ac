@@ -31,8 +31,8 @@ const AboutSection = () => {
                   emocional.
                 </p>
                 <p>
-                  Actualmente esta sumergida en Atemporal, un proyecto de
-                  búsqueda y retorno, donde explora su raíz mediterránea y la
+                  Actualmente esta sumergida en A T E M P O R A L, un proyecto
+                  de búsqueda y retorno, donde explora su raíz mediterránea y la
                   fusión de culturas y paisajes sonoros que habitan su
                   identidad. Es un viaje hacia la comprensión profunda de que
                   todos venimos del mismo vientre, de las mismas orillas y eso
