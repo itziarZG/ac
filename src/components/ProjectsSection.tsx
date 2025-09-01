@@ -20,9 +20,9 @@ const ProjectsSection = () => {
     },
     {
       id: 2,
-      title: "En Esta Orilla de Drexler",
+      title: "Drexleriana",
       description:
-        "Su primer álbum en solitario, que contó con la complicidad de Jorge Drexler y supuso un antes y un después en su carrera profesional, siendo su debut discográfico, se reimagina ahora para dar origen a Drexleriana. Este proyecto renace en formato de quinteto y sale de gira acompañado por la voz y la guitarra de Gladston Galliza como artista invitado, abriendo un nuevo capítulo sonoro que dialoga con aquel inicio y lo expande hacia el presente.",
+        "'En Esta Orilla de Drexler', su primer álbum en solitario, que contó con la complicidad de Jorge Drexler y supuso un antes y un después en su carrera profesional, siendo su debut discográfico, se reimagina ahora para dar origen a Drexleriana. Este proyecto renace en formato de quinteto y sale de gira acompañado por la voz y la guitarra de Gladston Galliza como artista invitado, abriendo un nuevo capítulo sonoro que dialoga con aquel inicio y lo expande hacia el presente.",
       image: "images/drexler.webp",
       year: "2012",
       pressKit: "#",
