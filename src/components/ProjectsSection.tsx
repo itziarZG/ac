@@ -14,6 +14,7 @@ const ProjectsSection = () => {
       pressKit:
         "https://www.espacioc.es/_files/ugd/46812f_b9264cedd45347a6a1e86e78da63f8b6.pdf",
       hasLink: true,
+      listenUrl: null,
       hover:
         "Un repertorio mestizo que nace de mi búsqueda personal y fascinación por el encuentro con la esencia del alma a través de la voz",
       featured: true,
@@ -27,6 +28,7 @@ const ProjectsSection = () => {
       year: "2012",
       pressKit: null,
       hasLink: false,
+      listenUrl: null,
     },
 
     {
@@ -38,6 +40,7 @@ const ProjectsSection = () => {
       year: "2016",
       pressKit: null,
       hasLink: false,
+      listenUrl: null,
     },
     {
       id: 4,
@@ -48,6 +51,7 @@ const ProjectsSection = () => {
       year: "2014",
       pressKit: null,
       hasLink: false,
+      listenUrl: null,
     },
 
     {
@@ -58,7 +62,8 @@ const ProjectsSection = () => {
       image: "/images/olasarenas.webp",
       year: "2024",
       pressKit: null,
-      hasLink: true,
+      hasLink: false,
+      listenUrl: null,
     },
   ];
 
@@ -99,16 +104,28 @@ const ProjectsSection = () => {
                     <div className="absolute inset-0 bg-gradient-to-t from-primary/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
                     <div className="absolute bottom-4 left-4 right-4 transform translate-y-4 group-hover:translate-y-0 opacity-0 group-hover:opacity-100 transition-all duration-300">
                       <div className="flex items-center gap-2 flex-wrap">
-                        {featuredProject.hasLink && (
-                          <button className="flex items-center gap-2 bg-primary-foreground text-primary px-3 py-1 rounded-full text-sm font-medium">
+                        {featuredProject.pressKit && (
+                          <a
+                            href={featuredProject.pressKit}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="flex items-center gap-2 bg-primary-foreground text-primary px-3 py-1 rounded-full text-sm font-medium"
+                          >
                             <ExternalLink className="w-4 h-4" />
                             Press Kit
-                          </button>
+                          </a>
                         )}
-                        <button className="flex items-center gap-2 bg-accent text-accent-foreground px-3 py-1 rounded-full text-sm font-medium">
-                          <Play className="w-4 h-4" />
-                          Escuchar
-                        </button>
+                        {featuredProject.listenUrl && (
+                          <a
+                            href={featuredProject.listenUrl}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="flex items-center gap-2 bg-accent text-accent-foreground px-3 py-1 rounded-full text-sm font-medium"
+                          >
+                            <Play className="w-4 h-4" />
+                            Escuchar
+                          </a>
+                        )}
                       </div>
                     </div>
                   </div>
@@ -153,16 +170,28 @@ const ProjectsSection = () => {
                   <div className="absolute inset-0 bg-gradient-to-t from-primary/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
                   <div className="absolute bottom-4 left-4 right-4 transform translate-y-4 group-hover:translate-y-0 opacity-0 group-hover:opacity-100 transition-all duration-300">
                     <div className="flex items-center gap-2">
-                      {project.hasLink && (
-                        <button className="flex items-center gap-2 bg-primary-foreground text-primary px-3 py-1 rounded-full text-sm font-medium">
+                      {project.pressKit && (
+                        <a
+                          href={project.pressKit}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="flex items-center gap-2 bg-primary-foreground text-primary px-3 py-1 rounded-full text-sm font-medium"
+                        >
                           <ExternalLink className="w-4 h-4" />
                           Press Kit
-                        </button>
+                        </a>
                       )}
-                      <button className="flex items-center gap-2 bg-accent text-accent-foreground px-3 py-1 rounded-full text-sm font-medium">
-                        <Play className="w-4 h-4" />
-                        Escuchar
-                      </button>
+                      {project.listenUrl && (
+                        <a
+                          href={project.listenUrl}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="flex items-center gap-2 bg-accent text-accent-foreground px-3 py-1 rounded-full text-sm font-medium"
+                        >
+                          <Play className="w-4 h-4" />
+                          Escuchar
+                        </a>
+                      )}
                     </div>
                   </div>
                 </div>
