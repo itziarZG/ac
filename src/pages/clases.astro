@@ -1,0 +1,90 @@
+---
+import Layout from "@/layouts/Layout.astro";
+const enviado = Astro.url.searchParams.get("enviado");
+const error = Astro.url.searchParams.get("error");
+export const prerender = false;
+---
+
+<Layout>
+  <section class="pt-28 pb-20 bg-soft-cream">
+    <div class="container mx-auto px-4 max-w-2xl">
+      {
+        enviado && (
+          <div class="mb-6 rounded-md border border-green-300 bg-green-50 text-green-800 px-4 py-3">
+            Mensaje enviado. Gracias, te contactaremos pronto.
+          </div>
+        )
+      }
+      {
+        error && (
+          <div class="mb-6 rounded-md border border-red-300 bg-red-50 text-red-800 px-4 py-3">
+            Ha ocurrido un error. Inténtalo de nuevo.
+          </div>
+        )
+      }
+      <h1 class="font-display text-4xl md:text-5xl font-bold text-primary mb-6">
+        Solicitar clases con Ángela
+      </h1>
+      <p class="font-sans text-muted-foreground mb-10">
+        Rellena el formulario y te contactaremos lo antes posible.
+      </p>
+
+      <form class="space-y-6" method="post" action="/api/clases">
+        <div>
+          <label class="font-sans text-sm text-primary block mb-2" for="name"
+            >Nombre</label
+          >
+          <input
+            id="name"
+            name="name"
+            type="text"
+            required
+            class="w-full rounded-md border border-border bg-background px-4 py-3 outline-none focus-visible:ring-2 focus-visible:ring-accent"
+          />
+        </div>
+        <div>
+          <label class="font-sans text-sm text-primary block mb-2" for="email"
+            >Email</label
+          >
+          <input
+            id="email"
+            name="email"
+            type="email"
+            required
+            class="w-full rounded-md border border-border bg-background px-4 py-3 outline-none focus-visible:ring-2 focus-visible:ring-accent"
+          />
+        </div>
+        <div>
+          <label class="font-sans text-sm text-primary block mb-2" for="phone"
+            >Teléfono</label
+          >
+          <input
+            id="phone"
+            name="phone"
+            type="tel"
+            required
+            class="w-full rounded-md border border-border bg-background px-4 py-3 outline-none focus-visible:ring-2 focus-visible:ring-accent"
+          />
+        </div>
+        <div>
+          <label class="font-sans text-sm text-primary block mb-2" for="message"
+            >Mensaje</label
+          >
+          <textarea
+            id="message"
+            name="message"
+            rows="5"
+            required
+            class="w-full rounded-md border border-border bg-background px-4 py-3 outline-none focus-visible:ring-2 focus-visible:ring-accent"
+          ></textarea>
+        </div>
+        <button
+          type="submit"
+          class="inline-flex items-center rounded-md bg-accent text-white px-6 py-3 font-sans font-medium shadow-soft hover:opacity-90"
+        >
+          Enviar solicitud
+        </button>
+      </form>
+    </div>
+  </section>
+</Layout>

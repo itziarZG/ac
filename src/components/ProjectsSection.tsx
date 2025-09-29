@@ -25,7 +25,7 @@ const ProjectsSection = () => {
         "'En Esta Orilla de Drexler', su primer álbum en solitario, que contó con la complicidad de Jorge Drexler y supuso un antes y un después en su carrera profesional, siendo su debut discográfico, se reimagina ahora para dar origen a Drexleriana. Este proyecto renace en formato de quinteto y sale de gira acompañado por la voz y la guitarra de Gladston Galliza como artista invitado, abriendo un nuevo capítulo sonoro que dialoga con aquel inicio y lo expande hacia el presente.",
       image: "images/drexler.webp",
       year: "2012",
-      pressKit: "#",
+      pressKit: null,
       hasLink: false,
     },
 
@@ -36,8 +36,8 @@ const ProjectsSection = () => {
         "Un homenaje entrañable a la mítica agrupación cubana Los Fakires y también a su abuela, celebrado incluso por Chucho Valdés por su belleza y autenticidad.",
       image: "images/camino.webp",
       year: "2016",
-      pressKit: "#",
-      hasLink: true,
+      pressKit: null,
+      hasLink: false,
     },
     {
       id: 4,
@@ -57,7 +57,7 @@ const ProjectsSection = () => {
         "Su primer álbum en solitario, que contó con la complicidad de Jorge Drexler y supuso un antes y un después en su carrera profesional, siendo su debut discográfico, se reimagina ahora para dar origen a Drexleriana. Este proyecto renace en formato de quinteto y sale de gira acompañado por la voz y la guitarra de Gladston Galliza como artista invitado, abriendo un nuevo capítulo sonoro que dialoga con aquel inicio y lo expande hacia el presente.",
       image: "/images/olasarenas.webp",
       year: "2024",
-      pressKit: "#",
+      pressKit: null,
       hasLink: true,
     },
   ];

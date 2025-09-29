@@ -1,5 +1,6 @@
 import React from "react";
 import { Mail, Phone, Globe } from "lucide-react";
+import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 
 const ContactSection = () => {
@@ -9,13 +10,30 @@ const ContactSection = () => {
     <section id="contacto" className="py-20 bg-soft-cream">
       <div className="container mx-auto px-4">
         <div className="max-w-4xl mx-auto">
-          <div className="text-center mb-16">
+          <div className="text-center mb-8">
             <h2 className="font-display text-4xl md:text-5xl font-bold text-primary mb-6">
               Contratación y management
             </h2>
             <p className="font-sans text-lg text-muted-foreground">
               Para contrataciones, colaboraciones y consultas profesionales
             </p>
+          </div>
+
+          {/* Bloque fijo de clases al inicio de la sección */}
+          <div className="mb-12 p-6 rounded-xl bg-soft-cream border border-border">
+            <p className="font-sans text-primary mb-2">
+              ¿Quieres recibir sesiones de canto o de vocal coach conmigo?
+              Escríbeme.
+            </p>
+            <p className="font-sans text-sm text-muted-foreground mb-4">
+              *Si deseas recibir sesiones de canto o necesitas asesoramiento
+              vocal para tu proyecto, escríbeme.
+            </p>
+            <a href="/clases">
+              <Button className="bg-accent text-white hover:opacity-90">
+                Solicitar clases
+              </Button>
+            </a>
           </div>
 
           <div className="flex justify-center items-center">

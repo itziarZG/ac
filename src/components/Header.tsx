@@ -15,12 +15,23 @@ const Header = () => {
     { id: "contacto", label: "Contacto" },
   ];
 
-  const scrollToSection = (sectionId: string) => {
-    const element = document.getElementById(sectionId);
-    if (element) {
-      element.scrollIntoView({ behavior: "smooth", block: "start" });
+  const handleNavClick = (sectionId: string, event?: React.MouseEvent) => {
+    const isHome = window.location.pathname === "/";
+    if (isHome) {
+      event?.preventDefault();
+      const element = document.getElementById(sectionId);
+      if (element) {
+        element.scrollIntoView({ behavior: "smooth", block: "start" });
+      } else {
+        // fallback: update hash so next paint scrolls
+        window.location.hash = sectionId;
+      }
+      setIsMenuOpen(false);
+    } else {
+      // Navega a inicio con hash; el scroll ocurrirá al cargar
+      // No prevenimos el default para permitir la navegación
+      setIsMenuOpen(false);
     }
-    setIsMenuOpen(false);
   };
 
   useEffect(() => {
@@ -47,25 +58,27 @@ const Header = () => {
     <header className="fixed top-0 w-full bg-background/90 backdrop-blur-md border-b border-border z-50">
       <div className="container mx-auto px-4">
         <div className="flex items-center justify-between h-16">
-          <button
-            onClick={() => scrollToSection("inicio")}
+          <a
+            href="/#inicio"
+            onClick={(e) => handleNavClick("inicio", e)}
             className="font-display text-xl font-medium text-primary hover:text-accent transition-colors"
           >
             Ángela Cervantes
-          </button>
+          </a>
 
           {/* Desktop Navigation */}
           <nav className="hidden md:flex space-x-8">
             {menuItems.map((item) => (
-              <button
+              <a
                 key={item.id}
-                onClick={() => scrollToSection(item.id)}
+                href={`/#${item.id}`}
+                onClick={(e) => handleNavClick(item.id, e)}
                 className={`font-sans text-sm font-medium transition-colors hover:text-accent ${
                   activeSection === item.id ? "text-accent" : "text-foreground"
                 }`}
               >
                 {item.label}
-              </button>
+              </a>
             ))}
           </nav>
 
@@ -89,9 +102,10 @@ const Header = () => {
           <nav className="md:hidden absolute top-16 left-0 right-0 bg-background border-b border-border shadow-soft">
             <div className="px-4 py-4 space-y-3">
               {menuItems.map((item) => (
-                <button
+                <a
                   key={item.id}
-                  onClick={() => scrollToSection(item.id)}
+                  href={`/#${item.id}`}
+                  onClick={(e) => handleNavClick(item.id, e)}
                   className={`block w-full text-left font-sans text-sm font-medium py-2 transition-colors hover:text-accent ${
                     activeSection === item.id
                       ? "text-accent"
@@ -99,7 +113,7 @@ const Header = () => {
                   }`}
                 >
                   {item.label}
-                </button>
+                </a>
               ))}
             </div>
           </nav>

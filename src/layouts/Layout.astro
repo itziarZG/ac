@@ -1,6 +1,7 @@
 ---
 import "@styles/globals.css";
 import Header from "@components/Header.jsx";
+import CallToActionFloating from "@components/CallToActionFloating.jsx";
 import Footer from "@components/Footer.jsx";
 ---
 
@@ -16,7 +17,6 @@ import Footer from "@components/Footer.jsx";
       href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&family=Playfair+Display:wght@400;500;600;700;800;900&display=swap"
       rel="stylesheet"
     />
-    <script src="https://studio.pickaxe.co/api/embed/bundle.js" defer></script>
   </head>
   <body>
     <Header client:load />
@@ -24,5 +24,6 @@ import Footer from "@components/Footer.jsx";
       <slot />
     </main>
     <Footer client:load />
+    <CallToActionFloating client:load />
   </body>
 </html>
