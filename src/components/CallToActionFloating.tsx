@@ -9,7 +9,11 @@ const CallToActionFloating = () => {
       <a
         href="mailto:hola@espacioc.es"
         aria-label="Contacto / Management"
-        className="md:hidden fixed bottom-0 left-0 right-0 z-[60]"
+        className="md:hidden fixed bottom-0 left-0 right-0 z-[60] cursor-pointer"
+        onClick={(e) => {
+          e.preventDefault();
+          window.location.href = "mailto:hola@espacioc.es";
+        }}
       >
         <div className="mx-4 mb-4 rounded-xl bg-gradient-to-r from-accent to-primary text-white shadow-soft px-6 py-4 flex items-center justify-between">
           <div className="flex items-center gap-3">
@@ -27,13 +31,21 @@ const CallToActionFloating = () => {
 
       {/* Desktop floating pill */}
       <div className="hidden md:block fixed bottom-6 right-6 z-[60]">
-        <a href="mailto:hola@espacioc.es" aria-label="Contacto / Management">
+        <a
+          href="mailto:hola@espacioc.es"
+          aria-label="Contacto / Management"
+          className="cursor-pointer"
+          onClick={(e) => {
+            e.preventDefault();
+            window.location.href = "mailto:hola@espacioc.es";
+          }}
+        >
           <div className="relative">
             <span className="absolute -top-1 -right-1 inline-flex h-3 w-3">
               <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-accent opacity-75" />
               <span className="relative inline-flex rounded-full h-3 w-3 bg-accent" />
             </span>
-            <Button className="shadow-soft bg-gradient-to-r from-accent to-primary text-white hover:opacity-90 hover:shadow-lg transition-all">
+            <Button className="shadow-soft bg-gradient-to-r from-accent to-primary text-white hover:opacity-90 hover:shadow-lg transition-all cursor-pointer">
               <Mail className="mr-2 h-5 w-5" />
               Management
             </Button>
