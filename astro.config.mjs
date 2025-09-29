@@ -7,7 +7,7 @@ import vercel from "@astrojs/vercel/serverless";
 // https://astro.build/config
 export default defineConfig({
   output: "server",
-  adapter: vercel(),
+  adapter: vercel({ runtime: "nodejs20.x" }),
   integrations: [react()],
   vite: {
     plugins: [tailwindcss()],
