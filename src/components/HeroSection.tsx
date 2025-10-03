@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from "react";
+import { Music } from "lucide-react";
 const frasesCarrusel = [
   "Una voz mestiza que viaja entre orillas.",
   "Canta desde la entraña. Compromiso, belleza y verdad.",
@@ -58,7 +59,7 @@ const HeroSection = () => {
             </div>
           </div>
 
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+          <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
             <button
               onClick={() =>
                 document
@@ -67,7 +68,7 @@ const HeroSection = () => {
               }
               className=" bg-[linear-gradient(135deg,hsl(var(--warm-gold)),hsl(var(--terracotta)))]  text-primary-foreground px-8 py-3 rounded-lg font-sans font-medium hover:shadow-warm transition-all duration-300 transform hover:scale-105"
             >
-              Descubre mi música
+              Descubre mis proyectos
             </button>
             <button
               onClick={() =>
@@ -78,6 +79,20 @@ const HeroSection = () => {
               className="border-2 border-accent text-accent px-8 py-3 rounded-lg font-sans font-medium hover:bg-accent hover:text-accent-foreground transition-all duration-300"
             >
               Contacto
+            </button>
+            <button
+              onClick={() =>
+                window.open(
+                  "https://tidal.com/browse/artist/6213027?u",
+                  "_blank",
+                  "noopener,noreferrer"
+                )
+              }
+              className="flex items-center gap-2 bg-gradient-to-r from-accent to-primary text-white px-4 py-3 rounded-lg font-sans font-medium hover:opacity-90 transition-all duration-300 transform hover:scale-105 shadow-soft"
+              title="Escucha mi música en TIDAL"
+            >
+              <Music className="h-4 w-4" />
+              <span className="hidden sm:inline">Escucha mi música</span>
             </button>
           </div>
         </div>

@@ -12,7 +12,7 @@ const ProjectsSection = () => {
       image: "images/atemporal.webp",
       year: "2025",
       pressKit:
-        "https://www.espacioc.es/_files/ugd/46812f_b9264cedd45347a6a1e86e78da63f8b6.pdf",
+        "https://espacioc.es/so/e7PbE0Xz5?languageTag=es&status=Draft&cid=00000000-0000-0000-0000-000000000000",
       hasLink: true,
       listenUrl: null,
       hover:
@@ -60,7 +60,7 @@ const ProjectsSection = () => {
       description:
         "Su primer álbum en solitario, que contó con la complicidad de Jorge Drexler y supuso un antes y un después en su carrera profesional, siendo su debut discográfico, se reimagina ahora para dar origen a Drexleriana. Este proyecto renace en formato de quinteto y sale de gira acompañado por la voz y la guitarra de Gladston Galliza como artista invitado, abriendo un nuevo capítulo sonoro que dialoga con aquel inicio y lo expande hacia el presente.",
       image: "/images/olasarenas.webp",
-      year: "2024",
+      year: "2021",
       pressKit: null,
       hasLink: false,
       listenUrl: null,

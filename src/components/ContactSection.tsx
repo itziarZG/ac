@@ -22,13 +22,11 @@ const ContactSection = () => {
           {/* Bloque fijo de clases al inicio de la sección */}
           <div className="mb-12 p-6 rounded-xl bg-soft-cream border border-border">
             <p className="font-sans text-primary mb-2">
-              ¿Quieres recibir sesiones de canto o de vocal coach conmigo?
-              Escríbeme.
+              ¿Te gustaría profundizar en el canto conmigo o necesitas
+              asesoramiento artístico para tu proyecto? Escríbeme y cuéntame lo
+              que necesitas. Te contestaré lo antes posible.
             </p>
-            <p className="font-sans text-sm text-muted-foreground mb-4">
-              *Si deseas recibir sesiones de canto o necesitas asesoramiento
-              vocal para tu proyecto, escríbeme.
-            </p>
+
             <a href="/clases">
               <Button className="bg-accent text-white hover:opacity-90">
                 Solicitar clases
@@ -82,10 +80,10 @@ const ContactSection = () => {
                           Email
                         </p>
                         <a
-                          href="mailto:hola@espacioc.es"
-                          className="font-sans text-foreground hover:text-accent transition-colors"
+                          href="mailto:comunicacion@espacioc.es"
+                          className="font-sans text-foreground hover:text-accent transition-colors cursor-pointer"
                         >
-                          hola@espacioc.es
+                          comunicacion@espacioc.es
                         </a>
                       </div>
                     </div>

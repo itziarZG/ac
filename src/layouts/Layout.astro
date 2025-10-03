@@ -3,6 +3,7 @@ import "@styles/globals.css";
 import Header from "@components/Header.jsx";
 import CallToActionFloating from "@components/CallToActionFloating.jsx";
 import Footer from "@components/Footer.jsx";
+import { Toaster } from "@components/ui/toaster.jsx";
 import Analytics from "@vercel/analytics/astro";
 ---
 
@@ -26,6 +27,7 @@ import Analytics from "@vercel/analytics/astro";
     </main>
     <Footer client:load />
     <CallToActionFloating client:load />
+    <Toaster client:load />
     <Analytics />
   </body>
 </html>
