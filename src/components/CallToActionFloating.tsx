@@ -55,7 +55,7 @@ const CallToActionFloating = () => {
         <div className="mx-4 mb-4 rounded-xl bg-gradient-to-r from-accent to-primary text-white shadow-soft px-6 py-4 flex items-center justify-between">
           <div className="flex items-center gap-3">
             <span className="inline-flex h-2.5 w-2.5 rounded-full bg-white/90 animate-pulse" />
-            <span className="font-display text-base">Contacto</span>
+            <span className="font-display text-base">Contratación</span>
           </div>
           <div className="flex items-center gap-2 opacity-95">
             <button
@@ -91,7 +91,7 @@ const CallToActionFloating = () => {
               className="shadow-soft bg-gradient-to-r from-accent to-primary text-white hover:opacity-90 hover:shadow-lg transition-all cursor-pointer"
             >
               <Mail className="mr-2 h-5 w-5" />
-              Contacto
+              Contratación
             </Button>
             <Button
               onClick={copyEmail}
