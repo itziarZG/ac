@@ -10,14 +10,7 @@ const ContactSection = () => {
     <section id="contacto" className="py-20 bg-soft-cream">
       <div className="container mx-auto px-4">
         <div className="max-w-4xl mx-auto">
-          <div className="text-center mb-8">
-            <h2 className="font-display text-4xl md:text-5xl font-bold text-primary mb-6">
-              Contratación y management
-            </h2>
-            <p className="font-sans text-lg text-muted-foreground">
-              Para contrataciones, colaboraciones y consultas profesionales
-            </p>
-          </div>
+         
 
           {/* Bloque fijo de clases al inicio de la sección */}
           <div className="mb-12 p-6 rounded-xl bg-soft-cream border border-border">
@@ -32,6 +25,14 @@ const ContactSection = () => {
                 Solicitar clases
               </Button>
             </a>
+          </div>
+ <div className="text-center mb-8">
+            <h2 className="font-display text-4xl md:text-5xl font-bold text-primary mb-6">
+              Contratación y management
+            </h2>
+            <p className="font-sans text-lg text-muted-foreground">
+              Para contrataciones, colaboraciones y consultas profesionales
+            </p>
           </div>
 
           <div className="flex justify-center items-center">

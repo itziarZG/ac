@@ -92,7 +92,7 @@ const ProjectsSection = () => {
                   <div className="relative aspect-square md:aspect-auto md:h-auto overflow-hidden">
                     {/* Titular hover, si existe */}
                     {featuredProject.hover && (
-                      <div className="absolute bottomgit l-0 left-0 w-full z-10 bg-primary/80 text-primary-foreground font-display text-sm md:text-lg px-4 py-2 rounded-b-xl shadow-md">
+                      <div className="absolute bottom-12 l-0 left-0 w-full z-10 bg-primary/80 text-primary-foreground font-display text-sm md:text-lg px-4 py-2 rounded-b-xl shadow-md">
                         {featuredProject.hover}
                       </div>
                     )}
