@@ -10,18 +10,22 @@ interface Props {
   title?: string;
   description?: string;
   image?: string;
+  keywords?: string;
+  structuredData?: object;
 }
 
 const {
   title = "Ángela Cervantes - Música y Arte",
   description = "Música, clases y proyectos artísticos. Descubre mi mundo musical y únete a esta experiencia única.",
   image = "/images/og-image.jpg",
+  keywords = "Ángela Cervantes, música, clases de música, proyectos musicales, artista, cantante, jazz, world music, música mediterránea",
+  structuredData,
 } = Astro.props;
 
 const siteUrl = "https://angelacervant.es"; // Fallback if Astro.site is not set yet
 const canonicalURL = new URL(Astro.url.pathname, Astro.site || siteUrl);
 
-const jsonLd = {
+const defaultJsonLd = {
   "@context": "https://schema.org",
   "@type": "Person",
   name: "Ángela Cervantes",
@@ -29,7 +33,14 @@ const jsonLd = {
   image: `${siteUrl}${image}`,
   jobTitle: "Cantante, Músico, Artista",
   description: description,
+  sameAs: [
+    "https://www.instagram.com/angelacervantesmusic",
+    "https://www.facebook.com/angelacervantesmesa",
+    "https://open.spotify.com/artist/...", // Update with actual link if available or remove
+  ],
 };
+
+const finalJsonLd = structuredData || defaultJsonLd;
 ---
 
 <!doctype html>
@@ -57,10 +68,7 @@ const jsonLd = {
     <title>{title}</title>
     <meta name="description" content={description} />
     <meta name="author" content="Ángela Cervantes" />
-    <meta
-      name="keywords"
-      content="Ángela Cervantes, música, clases de música, proyectos musicales, artista, cantante"
-    />
+    <meta name="keywords" content={keywords} />
 
     <!-- Open Graph / Facebook -->
     <meta property="og:type" content="website" />
@@ -77,7 +85,7 @@ const jsonLd = {
     <meta property="twitter:image" content={new URL(image, siteUrl)} />
 
     <!-- JSON-LD Structured Data -->
-    <script type="application/ld+json" set:html={JSON.stringify(jsonLd)} />
+    <script type="application/ld+json" set:html={JSON.stringify(finalJsonLd)} />
 
     <link
       href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&family=Playfair+Display:wght@400;500;600;700;800;900&display=swap"

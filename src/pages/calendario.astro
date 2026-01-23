@@ -1,0 +1,21 @@
+---
+import Layout from "@/layouts/Layout.astro";
+import CalendarSection from "@components/CalendarSection.jsx";
+
+// TODO: This should ideally be dynamic from CMS or props in valid implementation
+const structuredData = {
+  "@context": "https://schema.org",
+  "@type": "CollectionPage",
+  name: "Agenda de Conciertos de Ángela Cervantes",
+  description: "Próximas fechas y conciertos en directo.",
+};
+---
+
+<Layout
+  title="Agenda de Conciertos y Eventos | Ángela Cervantes"
+  description="Consulta las próximas fechas de conciertos de Ángela Cervantes. No te pierdas sus actuaciones en directo. Jazz, mestizaje y emoción."
+  keywords="conciertos Ángela Cervantes, agenda musical, eventos en vivo, entradas conciertos, gira 2025"
+  structuredData={structuredData}
+>
+  <CalendarSection client:load />
+</Layout>

@@ -60,26 +60,18 @@ const HeroSection = () => {
           </div>
 
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
-            <button
-              onClick={() =>
-                document
-                  .getElementById("proyectos")
-                  ?.scrollIntoView({ behavior: "smooth" })
-              }
-              className=" bg-[linear-gradient(135deg,hsl(var(--warm-gold)),hsl(var(--terracotta)))]  text-primary-foreground px-8 py-3 rounded-lg font-sans font-medium hover:shadow-warm transition-all duration-300 transform hover:scale-105"
+            <a
+              href="/proyectos"
+              className="bg-[linear-gradient(135deg,hsl(var(--warm-gold)),hsl(var(--terracotta)))] text-primary-foreground px-8 py-3 rounded-lg font-sans font-medium hover:shadow-warm transition-all duration-300 transform hover:scale-105"
             >
               Descubre mis proyectos
-            </button>
-            <button
-              onClick={() =>
-                document
-                  .getElementById("contacto")
-                  ?.scrollIntoView({ behavior: "smooth" })
-              }
+            </a>
+            <a
+              href="/contacto"
               className="border-2 border-accent text-accent px-8 py-3 rounded-lg font-sans font-medium hover:bg-accent hover:text-accent-foreground transition-all duration-300"
             >
               Contacto
-            </button>
+            </a>
             <button
               onClick={() =>
                 window.open(

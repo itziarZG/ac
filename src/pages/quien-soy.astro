@@ -1,0 +1,30 @@
+---
+import Layout from "@/layouts/Layout.astro";
+import AboutSection from "@components/AboutSection.jsx";
+
+const structuredData = {
+  "@context": "https://schema.org",
+  "@type": "ProfilePage",
+  mainEntity: {
+    "@type": "Person",
+    name: "Ángela Cervantes",
+    jobTitle: "Cantante y Compositora",
+    description:
+      "Cantante ibicenca conocida por su fusión de estilos y raíces mediterráneas.",
+    image: "https://angelacervant.es/images_new/ÁngelaCervantes_1.webp",
+    sameAs: [
+      "https://www.instagram.com/angelacervantesmusic",
+      "https://www.facebook.com/angelacervantesmesa",
+    ],
+  },
+};
+---
+
+<Layout
+  title="Quién es Ángela Cervantes | Biografía y Trayectoria"
+  description="Conoce la trayectoria de Ángela Cervantes: desde sus raíces en Ibiza hasta escenarios internacionales como el Royal Albert Hall. Jazz, fusión y alma."
+  keywords="biografía Ángela Cervantes, cantante ibicenca, trayectoria musical, jazz español, música raíz, Ariel Bringuez, Jorge Drexler"
+  structuredData={structuredData}
+>
+  <AboutSection client:load />
+</Layout>

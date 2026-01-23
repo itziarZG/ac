@@ -1,0 +1,25 @@
+---
+import Layout from "@/layouts/Layout.astro";
+import ContactSection from "@components/ContactSection.jsx";
+
+const structuredData = {
+  "@context": "https://schema.org",
+  "@type": "ContactPage",
+  mainEntity: {
+    "@type": "Person",
+    name: "Rocío Royo Durán",
+    jobTitle: "Manager / Gestión Cultural",
+    email: "comunicacion@espacioc.es",
+    telephone: "+34 678 007 121",
+  },
+};
+---
+
+<Layout
+  title="Contacto y Contratación | Ángela Cervantes"
+  description="Contacta con el equipo de Ángela Cervantes para contrataciones, entrevistas o colaboraciones. Gestión a cargo de Espacio C."
+  keywords="contratación cantantes jazz, contactar Ángela Cervantes, manager música, Espacio C, Rocío Royo Durán, clases de canto"
+  structuredData={structuredData}
+>
+  <ContactSection client:load />
+</Layout>

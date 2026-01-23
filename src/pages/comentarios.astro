@@ -1,0 +1,21 @@
+---
+import Layout from "@/layouts/Layout.astro";
+import TestimonialsSection from "@components/TestimonialsSection.jsx";
+
+const structuredData = {
+  "@context": "https://schema.org",
+  "@type": "CollectionPage",
+  name: "Reseñas y Testimonios sobre Ángela Cervantes",
+  description:
+    "Lo que la prensa y el público dicen sobre la música de Ángela Cervantes.",
+};
+---
+
+<Layout
+  title="Prensa y Testimonios | Lo que dicen de Ángela Cervantes"
+  description="Lee las reseñas, críticas y testimonios sobre Ángela Cervantes. Descubre cómo su voz y su música impactan al público y a la crítica."
+  keywords="reseñas Ángela Cervantes, críticas musicales, prensa, testimonios conciertos, opiniones"
+  structuredData={structuredData}
+>
+  <TestimonialsSection client:load />
+</Layout>
