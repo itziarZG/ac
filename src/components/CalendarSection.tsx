@@ -6,7 +6,7 @@ const CalendarSection = () => (
       <div className="max-w-4xl mx-auto">
         <div className="text-center mb-16">
           <h2 className="font-display text-4xl md:text-5xl font-bold text-primary mb-6">
-            Calendario
+            Calendario de conciertos y eventos
           </h2>
           <p className="font-sans text-lg text-muted-foreground">
             Próximas actuaciones y eventos en directo

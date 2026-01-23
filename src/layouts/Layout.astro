@@ -5,6 +5,31 @@ import CallToActionFloating from "@components/CallToActionFloating.jsx";
 import Footer from "@components/Footer.jsx";
 import { Toaster } from "@components/ui/toaster.jsx";
 import Analytics from "@vercel/analytics/astro";
+
+interface Props {
+  title?: string;
+  description?: string;
+  image?: string;
+}
+
+const {
+  title = "Ángela Cervantes - Música y Arte",
+  description = "Música, clases y proyectos artísticos. Descubre mi mundo musical y únete a esta experiencia única.",
+  image = "/images/og-image.jpg",
+} = Astro.props;
+
+const siteUrl = "https://angelacervant.es"; // Fallback if Astro.site is not set yet
+const canonicalURL = new URL(Astro.url.pathname, Astro.site || siteUrl);
+
+const jsonLd = {
+  "@context": "https://schema.org",
+  "@type": "Person",
+  name: "Ángela Cervantes",
+  url: siteUrl,
+  image: `${siteUrl}${image}`,
+  jobTitle: "Cantante, Músico, Artista",
+  description: description,
+};
 ---
 
 <!doctype html>
@@ -13,40 +38,47 @@ import Analytics from "@vercel/analytics/astro";
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="view-transition" content="same-origin" />
-    
+
+    <!-- Canonical URL -->
+    <link rel="canonical" href={canonicalURL} />
+
     <!-- Favicon and App Icons -->
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
     <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
     <link rel="shortcut icon" href="/favicon.ico" />
     <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
-    
+
     <!-- Web App Manifest -->
     <link rel="manifest" href="/site.webmanifest" />
     <meta name="theme-color" content="#ffffff" />
-    
+
     <!-- SEO Meta Tags -->
-    <meta name="description" content="Ángela Cervantes - Música, clases y proyectos artísticos. Descubre mi mundo musical y únete a esta experiencia única." />
+    <title>{title}</title>
+    <meta name="description" content={description} />
     <meta name="author" content="Ángela Cervantes" />
-    <meta name="keywords" content="Ángela Cervantes, música, clases de música, proyectos musicales, artista" />
-    
+    <meta
+      name="keywords"
+      content="Ángela Cervantes, música, clases de música, proyectos musicales, artista, cantante"
+    />
+
     <!-- Open Graph / Facebook -->
     <meta property="og:type" content="website" />
-    <meta property="og:url" content="https://angelacervantes.com/" />
-    <meta property="og:title" content="Ángela Cervantes - Música y Arte" />
-    <meta property="og:description" content="Música, clases y proyectos artísticos. Descubre mi mundo musical y únete a esta experiencia única." />
-    <meta property="og:image" content="/images/og-image.jpg" />
-    <meta property="og:image:width" content="1200" />
-    <meta property="og:image:height" content="630" />
-    
+    <meta property="og:url" content={canonicalURL} />
+    <meta property="og:title" content={title} />
+    <meta property="og:description" content={description} />
+    <meta property="og:image" content={new URL(image, siteUrl)} />
+
     <!-- Twitter -->
     <meta property="twitter:card" content="summary_large_image" />
-    <meta property="twitter:url" content="https://angelacervantes.com/" />
-    <meta property="twitter:title" content="Ángela Cervantes - Música y Arte" />
-    <meta property="twitter:description" content="Música, clases y proyectos artísticos. Descubre mi mundo musical y únete a esta experiencia única." />
-    <meta property="twitter:image" content="/images/og-image.jpg" />
-    
-    <title>Ángela Cervantes Web</title>
+    <meta property="twitter:url" content={canonicalURL} />
+    <meta property="twitter:title" content={title} />
+    <meta property="twitter:description" content={description} />
+    <meta property="twitter:image" content={new URL(image, siteUrl)} />
+
+    <!-- JSON-LD Structured Data -->
+    <script type="application/ld+json" set:html={JSON.stringify(jsonLd)} />
+
     <link
       href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&family=Playfair+Display:wght@400;500;600;700;800;900&display=swap"
       rel="stylesheet"

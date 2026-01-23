@@ -15,20 +15,19 @@ const ContactSection = () => {
           {/* Bloque fijo de clases al inicio de la sección */}
           <div className="mb-12 p-6 rounded-xl bg-soft-cream border border-border">
             <p className="font-sans text-primary mb-2">
-              ¿Te gustaría profundizar en el canto conmigo o necesitas
-              asesoramiento artístico para tu proyecto? Escríbeme y cuéntame lo
-              que necesitas. Te contestaré lo antes posible.
+              ¿Buscas clases de canto profesional o asesoramiento vocal? Escríbeme
+              y cuéntame lo que necesitas. Te contestaré lo antes posible.
             </p>
 
             <a href="/clases">
               <Button className="bg-accent text-white hover:opacity-90">
-                Solicitar clases
+                Solicitar clases de canto
               </Button>
             </a>
           </div>
  <div className="text-center mb-8">
             <h2 className="font-display text-4xl md:text-5xl font-bold text-primary mb-6">
-              Contratación y management
+              Contacto y contrataciones
             </h2>
             <p className="font-sans text-lg text-muted-foreground">
               Para contrataciones, colaboraciones y consultas profesionales

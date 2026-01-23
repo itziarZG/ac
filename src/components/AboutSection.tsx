@@ -13,10 +13,15 @@ const AboutSection = () => {
           <div className="grid md:grid-cols-2 gap-12 items-center">
             <div className="space-y-6">
               <h2 className="font-display text-4xl md:text-5xl font-bold text-primary mb-8">
-                Quién soy
+                Quién es Ángela Cervantes
               </h2>
 
               <div className="space-y-4 font-sans text-lg text-foreground leading-relaxed">
+                <p className="font-medium text-xl text-primary/90">
+                  Soy Ángela Cervantes, cantante y compositora ibicenca de
+                  música mestiza, con proyectos propios de fusión mediterránea y
+                  trayectoria internacional.
+                </p>
                 <p>
                   Cantante y compositora ibicenca con alma mestiza y vuelo
                   internacional. Su voz, libre y versátil, recorre escenarios de
