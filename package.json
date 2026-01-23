@@ -9,10 +9,11 @@
     "astro": "astro"
   },
   "engines": {
-    "node": "20.x"
+    "node": "24.x"
   },
   "dependencies": {
     "@astrojs/react": "^4.2.5",
+    "@astrojs/sitemap": "^3.7.0",
     "@astrojs/vercel": "^8.2.8",
     "@hookform/resolvers": "^3.9.0",
     "@radix-ui/react-accordion": "^1.2.0",

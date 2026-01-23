@@ -76,7 +76,7 @@ const ProjectsSection = () => {
         <div className="max-w-6xl mx-auto">
           <div className="text-center mb-16">
             <h2 className="font-display text-4xl md:text-5xl font-bold text-primary mb-6">
-              Proyectos
+              Proyectos musicales de Ángela Cervantes
             </h2>
             <p className="font-sans text-lg text-muted-foreground max-w-2xl mx-auto">
               Una colección de trabajos que reflejan mi compromiso con la música
