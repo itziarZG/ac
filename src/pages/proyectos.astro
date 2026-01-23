@@ -1,0 +1,36 @@
+---
+import Layout from "@/layouts/Layout.astro";
+import ProjectsSection from "@components/ProjectsSection.jsx";
+
+const structuredData = {
+  "@context": "https://schema.org",
+  "@type": "CollectionPage",
+  name: "Proyectos Musicales de Ángela Cervantes",
+  description:
+    "Discografía y proyectos actuales: A T E M P O R A L, Drexleriana, Camino a Santa Clara.",
+  mainEntity: {
+    "@type": "ItemList",
+    itemListElement: [
+      {
+        "@type": "MusicAlbum",
+        name: "A T E M P O R A L",
+        datePublished: "2025",
+      },
+      {
+        "@type": "MusicAlbum",
+        name: "Drexleriana",
+        datePublished: "2012",
+      },
+    ],
+  },
+};
+---
+
+<Layout
+  title="Proyectos Musicales | A T E M P O R A L, Drexleriana y más"
+  description="Descubre la discografía y conciertos de Ángela Cervantes. Desde 'En esta orilla de Drexler' hasta su nuevo trabajo 'A T E M P O R A L'. Fusión y raíz."
+  keywords="discografía Ángela Cervantes, A T E M P O R A L, Drexleriana, música fusión, Jorge Drexler, jazz latino"
+  structuredData={structuredData}
+>
+  <ProjectsSection client:load />
+</Layout>

@@ -4,63 +4,34 @@ import { Button } from "@/components/ui/button";
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
-  const [activeSection, setActiveSection] = useState("inicio");
+  const [currentPath, setCurrentPath] = useState("");
 
   const menuItems = [
-    { id: "inicio", label: "Inicio" },
-    { id: "quien-soy", label: "Quién soy" },
-    { id: "proyectos", label: "Proyectos" },
-    { id: "calendario", label: "Calendario" },
-    { id: "comentarios", label: "Comentarios" },
-    { id: "contacto", label: "Contacto" },
+    { href: "/", label: "Inicio" },
+    { href: "/quien-soy", label: "Quién soy" },
+    { href: "/proyectos", label: "Proyectos" },
+    { href: "/calendario", label: "Calendario" },
+    { href: "/comentarios", label: "Comentarios" },
+    { href: "/contacto", label: "Contacto" },
   ];
 
-  const handleNavClick = (sectionId: string, event?: React.MouseEvent) => {
-    const isHome = window.location.pathname === "/";
-    if (isHome) {
-      event?.preventDefault();
-      const element = document.getElementById(sectionId);
-      if (element) {
-        element.scrollIntoView({ behavior: "smooth", block: "start" });
-      } else {
-        // fallback: update hash so next paint scrolls
-        window.location.hash = sectionId;
-      }
-      setIsMenuOpen(false);
-    } else {
-      // Navega a inicio con hash; el scroll ocurrirá al cargar
-      // No prevenimos el default para permitir la navegación
-      setIsMenuOpen(false);
-    }
-  };
-
   useEffect(() => {
-    const handleScroll = () => {
-      const sections = menuItems.map((item) =>
-        document.getElementById(item.id)
-      );
-      const scrollPosition = window.scrollY + 100;
-
-      for (let i = sections.length - 1; i >= 0; i--) {
-        const section = sections[i];
-        if (section && section.offsetTop <= scrollPosition) {
-          setActiveSection(menuItems[i].id);
-          break;
-        }
-      }
-    };
-
-    window.addEventListener("scroll", handleScroll);
-    return () => window.removeEventListener("scroll", handleScroll);
+    setCurrentPath(window.location.pathname);
   }, []);
+
+  // Helper to check if link is active
+  const isActive = (href: string) => {
+    if (href === "/" && currentPath === "/") return true;
+    if (href !== "/" && currentPath.startsWith(href)) return true;
+    return false;
+  };
 
   return (
     <header className="fixed top-0 w-full bg-background/90 backdrop-blur-md border-b border-border z-50">
       <div className="container mx-auto px-4">
         <div className="flex items-center justify-between h-16">
           <a
-            href="/#inicio"
-            onClick={(e) => handleNavClick("inicio", e)}
+            href="/"
             className="font-display text-xl font-medium text-primary hover:text-accent transition-colors"
           >
             Ángela Cervantes
@@ -70,11 +41,10 @@ const Header = () => {
           <nav className="hidden md:flex space-x-8">
             {menuItems.map((item) => (
               <a
-                key={item.id}
-                href={`/#${item.id}`}
-                onClick={(e) => handleNavClick(item.id, e)}
+                key={item.href}
+                href={item.href}
                 className={`font-sans text-sm font-medium transition-colors hover:text-accent ${
-                  activeSection === item.id ? "text-accent" : "text-foreground"
+                  isActive(item.href) ? "text-accent" : "text-foreground"
                 }`}
               >
                 {item.label}
@@ -103,11 +73,11 @@ const Header = () => {
             <div className="px-4 py-4 space-y-3">
               {menuItems.map((item) => (
                 <a
-                  key={item.id}
-                  href={`/#${item.id}`}
-                  onClick={(e) => handleNavClick(item.id, e)}
+                  key={item.href}
+                  href={item.href}
+                  onClick={() => setIsMenuOpen(false)}
                   className={`block w-full text-left font-sans text-sm font-medium py-2 transition-colors hover:text-accent ${
-                    activeSection === item.id
+                    isActive(item.href)
                       ? "text-accent"
                       : "text-foreground"
                   }`}
